@@ -3,8 +3,8 @@ window.Reflux = require("reflux")
 window.Firebase = require("firebase")
 window.UUID = require("node-uuid")
 
-Reflux.StoreMethods.getInitialState = function() {return this.getData()}
-Reflux.StoreMethods.retrigger = function() {this.trigger(this.getData())}
+window.Reflux.StoreMethods.getInitialState = function() {return this.getData()}
+window.Reflux.StoreMethods.retrigger = function() {this.trigger(this.getData())}
 
 window.MIN_WIDTH = 0
 window.MIN_HEIGHT = 0
