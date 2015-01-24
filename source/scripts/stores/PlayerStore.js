@@ -1,5 +1,6 @@
 var LoopActions = require("<scripts>/actions/LoopActions")
 var PlayerActions = require("<scripts>/actions/PlayerActions")
+var GameStore = require("<scripts>/stores/GameStore")
 
 var acceleration = 1
 var deacceleration = 0.35
@@ -8,9 +9,21 @@ var maximum_velocity = 3
 var PlayerStore = Reflux.createStore({
     data: [
         {
+            id: 0,
             position: {
-                x: 3,
-                y: 3
+                x: 0,
+                y: 0
+            },
+            velocity: {
+                x: 0,
+                y: 0
+            }
+        },
+        {
+            id: 1,
+            position: {
+                x: -8,
+                y: -4.5
             },
             velocity: {
                 x: 0,
@@ -21,29 +34,33 @@ var PlayerStore = Reflux.createStore({
     getData: function() {
         return this.data
     },
+    getMyData: function() {
+        var my_id = GameStore.getData().my_id
+        return this.data[my_id]
+    },
     listenables: [
         LoopActions,
         PlayerActions
     ],
-    onPlayerMoveNorth: function(tick) {
+    onPlayerPushNorth: function(tick) {
         this.data[0].velocity.y -= acceleration * tick
         if(this.data[0].velocity.y < -maximum_velocity) {
             this.data[0].velocity.y = -maximum_velocity
         }
     },
-    onPlayerMoveSouth: function(tick) {
+    onPlayerPushSouth: function(tick) {
         this.data[0].velocity.y += acceleration * tick
         if(this.data[0].velocity.y > +maximum_velocity) {
             this.data[0].velocity.y = +maximum_velocity
         }
     },
-    onPlayerMoveWest: function(tick) {
+    onPlayerPushWest: function(tick) {
         this.data[0].velocity.x -= acceleration * tick
         if(this.data[0].velocity.x < -maximum_velocity) {
             this.data[0].velocity.x = -maximum_velocity
         }
     },
-    onPlayerMoveEast: function(tick) {
+    onPlayerPushEast: function(tick) {
         this.data[0].velocity.x += acceleration * tick
         if(this.data[0].velocity.x > +maximum_velocity) {
             this.data[0].velocity.x = +maximum_velocity

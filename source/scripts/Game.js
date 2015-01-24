@@ -17,10 +17,10 @@ var Game = React.createClass({
 		Reflux.connect(StarStore, "stars")
 	],
 	componentDidMount: function() {
-		InputActionStore.addAction("w", PlayerActions.PlayerMoveNorth)
-		InputActionStore.addAction("s", PlayerActions.PlayerMoveSouth)
-		InputActionStore.addAction("a", PlayerActions.PlayerMoveWest)
-		InputActionStore.addAction("d", PlayerActions.PlayerMoveEast)
+		InputActionStore.addAction("w", PlayerActions.PlayerPushNorth)
+		InputActionStore.addAction("s", PlayerActions.PlayerPushSouth)
+		InputActionStore.addAction("a", PlayerActions.PlayerPushWest)
+		InputActionStore.addAction("d", PlayerActions.PlayerPushEast)
 	},
 	render: function() {
 		return (

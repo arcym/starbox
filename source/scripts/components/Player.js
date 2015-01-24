@@ -8,15 +8,26 @@ var Player = React.createClass({
         )
     },
     renderStyles: function() {
-        /*return {
-            left: this.props.data.position.x - 0.5 + "em",
-            top: this.props.data.position.y - 0.5 + "em"
-        }*/
+        var my_data = PlayerStore.getMyData()
+        if(this.props.data.id == my_data.id) {
+            return {
+                top: "0px",
+                left: "0px",
+                right: "0px",
+                bottom: "0px",
+                margin: "auto"
+            }
+        } else {
+            console.log(my_data.position.x, this.props.data.position.x)
+            return {
+                left: -my_data.position.x - this.props.data.position.x - (MAX_WIDTH / 2) - 0.5 + "em",
+                top: -my_data.position.y - this.props.data.position.y - (MAX_HEIGHT / 2) - 0.5 + "em"
+            }
+        }
     },
     renderClasses: function() {
         return React.addons.classSet({
-            player: true,
-            me: true
+            player: true
         })
     }
 })

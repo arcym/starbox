@@ -1,6 +1,6 @@
 var PlayerActions = Reflux.createActions([
-	"PlayerMoveNorth", "PlayerMoveSouth",
-	"PlayerMoveEast", "PlayerMoveWest",
+	"PlayerPushNorth", "PlayerPushSouth",
+	"PlayerPushEast", "PlayerPushWest",
 	"PlayerMove"
 ])
 

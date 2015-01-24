@@ -12,7 +12,7 @@ var StarStore = Reflux.createStore({
                 position: {
                     x: Math.random() * MAX_WIDTH,
                     y: Math.random() * MAX_HEIGHT,
-                    z: Math.random() * (1 - 0.15) + 0.15
+                    z: Math.random() * (1 - 0.25) + 0.25
                 }
             })
         }
