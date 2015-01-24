@@ -1,10 +1,11 @@
+var Player = require("<scripts>/components/Player")
 var GameFrame = require("<scripts>/components/GameFrame")
 
 var Game = React.createClass({
 	render: function() {
 		return (
 			<GameFrame>
-				Hello World!
+				<Player/>
 			</GameFrame>
 		)
 	}

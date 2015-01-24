@@ -3,9 +3,12 @@
     margin: 0px;
 }
 
-@import "./styles/_GameFrame.scss";
+@import "./styles/references/_Fonts.scss";
+@import "./styles/components/_GameFrame.scss";
+@import "./styles/components/_Player.scss";
 
 #game-frame
 {
-    background-color: red;
+    font-family: goldfish;
+    background-color: #EEE;
 }
