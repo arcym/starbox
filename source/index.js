@@ -1,5 +1,7 @@
 window.React = require("react/addons")
 window.Reflux = require("reflux")
+window.Firebase = require("firebase")
+window.UUID = require("node-uuid")
 
 Reflux.StoreMethods.getInitialState = function() {return this.getData()}
 Reflux.StoreMethods.retrigger = function() {this.trigger(this.getData())}

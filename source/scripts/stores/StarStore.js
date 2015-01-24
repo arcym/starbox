@@ -1,4 +1,5 @@
 var PlayerActions = require("<scripts>/actions/PlayerActions")
+var GameStore = require("<scripts>/stores/GameStore")
 
 var StarStore = Reflux.createStore({
     data: [
@@ -20,7 +21,8 @@ var StarStore = Reflux.createStore({
     listenables: [
         PlayerActions
     ],
-    onPlayerMove: function(dx, dy) {
+    onPlayerMove: function(key, dx, dy) {
+        if(key == GameStore.getData().my_id)
         for(var index = 0; index < this.data.length; index++) {
             this.data[index].position.x -= dx * this.data[index].position.z
             this.data[index].position.y -= dy * this.data[index].position.z

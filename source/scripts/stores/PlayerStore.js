@@ -6,31 +6,27 @@ var acceleration = 1
 var deacceleration = 0.35
 var maximum_velocity = 3
 
+var firebase = new Firebase("https://starbox.firebaseio.com/")
+
+var me = {
+    position: {
+        x: 0,
+        y: 0
+    },
+    velocity: {
+        x: 0,
+        y: 0
+    }
+}
+
+var ref = firebase.push(me)
+GameStore.setData({
+    my_id: ref.key()
+})
+
 var PlayerStore = Reflux.createStore({
-    data: [
-        {
-            id: 0,
-            position: {
-                x: 0,
-                y: 0
-            },
-            velocity: {
-                x: 0,
-                y: 0
-            }
-        },
-        {
-            id: 1,
-            position: {
-                x: -8,
-                y: -4.5
-            },
-            velocity: {
-                x: 0,
-                y: 0
-            }
-        }
-    ],
+    data: {
+    },
     getData: function() {
         return this.data
     },
@@ -38,43 +34,59 @@ var PlayerStore = Reflux.createStore({
         var my_id = GameStore.getData().my_id
         return this.data[my_id]
     },
+    setData: function(key, value) {
+        this.data[key] = value
+        this.data[key].id = key
+        this.retrigger()
+    },
     listenables: [
         LoopActions,
         PlayerActions
     ],
     onPlayerPushNorth: function(tick) {
-        this.data[0].velocity.y -= acceleration * tick
-        if(this.data[0].velocity.y < -maximum_velocity) {
-            this.data[0].velocity.y = -maximum_velocity
+        var my_id = GameStore.getData().my_id
+        this.data[my_id].velocity.y -= acceleration * tick
+        if(this.data[my_id].velocity.y < -maximum_velocity) {
+            this.data[my_id].velocity.y = -maximum_velocity
         }
+        firebase.child(my_id).set(this.data[my_id])
     },
     onPlayerPushSouth: function(tick) {
-        this.data[0].velocity.y += acceleration * tick
-        if(this.data[0].velocity.y > +maximum_velocity) {
-            this.data[0].velocity.y = +maximum_velocity
+        var my_id = GameStore.getData().my_id
+        this.data[my_id].velocity.y += acceleration * tick
+        if(this.data[my_id].velocity.y > +maximum_velocity) {
+            this.data[my_id].velocity.y = +maximum_velocity
         }
+        firebase.child(my_id).set(this.data[my_id])
     },
     onPlayerPushWest: function(tick) {
-        this.data[0].velocity.x -= acceleration * tick
-        if(this.data[0].velocity.x < -maximum_velocity) {
-            this.data[0].velocity.x = -maximum_velocity
+        var my_id = GameStore.getData().my_id
+        this.data[my_id].velocity.x -= acceleration * tick
+        if(this.data[my_id].velocity.x < -maximum_velocity) {
+            this.data[my_id].velocity.x = -maximum_velocity
         }
+        firebase.child(my_id).set(this.data[my_id])
     },
     onPlayerPushEast: function(tick) {
-        this.data[0].velocity.x += acceleration * tick
-        if(this.data[0].velocity.x > +maximum_velocity) {
-            this.data[0].velocity.x = +maximum_velocity
+        var my_id = GameStore.getData().my_id
+        this.data[my_id].velocity.x += acceleration * tick
+        if(this.data[my_id].velocity.x > +maximum_velocity) {
+            this.data[my_id].velocity.x = +maximum_velocity
         }
+        firebase.child(my_id).set(this.data[my_id])
     },
-    onPlayerMove: function(dx, dy) {
-        this.data[0].position.x += dx
-        this.data[0].position.y += dy
+    onPlayerMove: function(key, dx, dy) {
+        this.data[key].position.x += dx
+        this.data[key].position.y += dy
+        firebase.child(key).set(this.data[my_id])
     },
     onTick: function(tick) {
-        var datum = this.data[0]
+        var my_id = GameStore.getData().my_id
+
+        var datum = this.data[my_id]
         var dx = datum.velocity.x * tick
         var dy = datum.velocity.y * tick
-        PlayerActions.PlayerMove(dx, dy)
+        PlayerActions.PlayerMove(my_id, dx, dy)
 
         if(datum.velocity.x < 0) {
             datum.velocity.x += deacceleration * tick
@@ -100,8 +112,16 @@ var PlayerStore = Reflux.createStore({
                 datum.velocity.y = 0
             }
         }
+        firebase.child(my_id).set(this.data[my_id])
         this.retrigger()
     }
+})
+
+firebase.on("child_added", function(child) {
+    PlayerStore.setData(child.key(), child.val())
+})
+firebase.on("child_changed", function(child) {
+    PlayerStore.setData(child.key(), child.val())
 })
 
 module.exports = PlayerStore
