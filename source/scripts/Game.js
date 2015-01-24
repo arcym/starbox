@@ -1,15 +1,14 @@
 var Star = require("<scripts>/components/Star")
-var Starship = require("<scripts>/components/Starship")
-var GameFrame = require("<scripts>/components/GameFrame")
-
-var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarStore = require("<scripts>/stores/StarStore")
 
+var Starship = require("<scripts>/components/Starship")
+var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 
 var LoopStore = require("<scripts>/stores/LoopStore")
 var InputActionStore = require("<scripts>/stores/InputActionStore")
 var KeyboardInputStore = require("<scripts>/stores/KeyboardInputStore")
+var GameFrame = require("<scripts>/components/GameFrame")
 
 var Game = React.createClass({
 	mixins: [
