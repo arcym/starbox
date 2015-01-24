@@ -2,8 +2,8 @@ var LoopActions = require("<scripts>/actions/LoopActions")
 var PlayerActions = require("<scripts>/actions/PlayerActions")
 var GameStore = require("<scripts>/stores/GameStore")
 
-var acceleration = 1.5
-var deacceleration = 0.5
+var acceleration = 2
+var deacceleration = 1
 var maximum_velocity = 3
 
 var PlayerStore = Reflux.createStore({
