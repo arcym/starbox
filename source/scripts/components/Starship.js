@@ -29,7 +29,10 @@ var Starship = React.createClass({
     },
     renderClasses: function() {
         return React.addons.classSet({
-            starship: true
+            starship: true,
+            ancient: this.props.data.affiliation == "ancient",
+            rebellion: this.props.data.affiliation == "rebellion",
+            federation: this.props.data.affiliation == "federation",
         })
     },
     renderModules: function() {

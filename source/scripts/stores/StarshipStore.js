@@ -18,51 +18,59 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
+            affiliation: "federation",
             modules: [
                 {
-                    type: "hull",
+                    category: "hull",
+                    affiliation: "federation",
                     position: {
                         x: -1,
                         y: 0
                     }
                 },
                 {
-                    type: "hull",
+                    category: "hull",
+                    affiliation: "federation",
                     position: {
                         x: 1,
                         y: 0
                     }
                 },
                 {
-                    type: "hull",
+                    category: "hull",
+                    affiliation: "federation",
                     position: {
                         x: 0,
                         y: -1
                     }
                 },
                 {
-                    type: "hull",
+                    category: "hull",
+                    affiliation: "federation",
                     position: {
                         x: 0,
                         y: 1
                     }
                 },
                 {
-                    type: "turret",
+                    category: "turret",
+                    affiliation: "federation",
                     position: {
                         x: 0,
                         y: -2
                     }
                 },
                 {
-                    type: "engine",
+                    category: "engine",
+                    affiliation: "federation",
                     position: {
                         x: -1,
                         y: 1
                     }
                 },
                 {
-                    type: "engine",
+                    category: "engine",
+                    affiliation: "federation",
                     position: {
                         x: 1,
                         y: 1
@@ -73,14 +81,110 @@ var StarshipStore = Reflux.createStore({
         1: {
             key: 1,
             position: {
-                x: -3,
-                y: -3
+                x: -4,
+                y: 0
             },
             velocity: {
                 x: 0,
                 y: 0
             },
-            modules: []
+            affiliation: "rebellion",
+            modules: [
+                {
+                    category: "hull",
+                    affiliation: "rebellion",
+                    position: {
+                        x: 0,
+                        y: 1
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "rebellion",
+                    position: {
+                        x: 0,
+                        y: -1
+                    }
+                },
+                {
+                    category: "turret",
+                    affiliation: "rebellion",
+                    position: {
+                        x: 0,
+                        y: -2
+                    }
+                },
+                {
+                    category: "engine",
+                    affiliation: "rebellion",
+                    position: {
+                        x: 0,
+                        y: 2
+                    }
+                }
+            ]
+        },
+        2: {
+            key: 2,
+            position: {
+                x: 5,
+                y: 0
+            },
+            velocity: {
+                x: 0,
+                y: 0
+            },
+            affiliation: "ancient",
+            modules: [
+                {
+                    category: "hull",
+                    affiliation: "ancient",
+                    position: {
+                        x: -1,
+                        y: 0
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "ancient",
+                    position: {
+                        x: 1,
+                        y: 0
+                    }
+                },
+                {
+                    category: "turret",
+                    affiliation: "ancient",
+                    position: {
+                        x: -1,
+                        y: -1
+                    }
+                },
+                {
+                    category: "turret",
+                    affiliation: "ancient",
+                    position: {
+                        x: 1,
+                        y: -1
+                    }
+                },
+                {
+                    category: "engine",
+                    affiliation: "ancient",
+                    position: {
+                        x: -1,
+                        y: 1
+                    }
+                },
+                {
+                    category: "engine",
+                    affiliation: "ancient",
+                    position: {
+                        x: 1,
+                        y: 1
+                    }
+                }
+            ]
         }
     },
     getData: function() {
