@@ -1,6 +1,8 @@
-var StarshipActions = require("<scripts>/actions/StarshipActions")
-var GameStore = require("<scripts>/stores/GameStore")
 var StarColors = require("<scripts>/references/StarColors")
+var StarshipActions = require("<scripts>/actions/StarshipActions")
+var PlayerStarshipStore = require("<scripts>/stores/PlayerStarshipStore")
+
+var AMOUNT_OF_STARS = 75
 
 var StarStore = Reflux.createStore({
     data: [
@@ -9,7 +11,7 @@ var StarStore = Reflux.createStore({
         return this.data
     },
     init: function() {
-        for(var index = 0; index < 75; index++) {
+        for(var index = 0; index < AMOUNT_OF_STARS; index++) {
             this.data.push({
                 position: {
                     x: Math.random() * MAX_WIDTH,
@@ -24,22 +26,24 @@ var StarStore = Reflux.createStore({
         StarshipActions
     ],
     onStarshipMove: function(key, dx, dy) {
-        if(key == GameStore.getData().my_id)
-        for(var index = 0; index < this.data.length; index++) {
-            this.data[index].position.x -= dx * this.data[index].position.z
-            this.data[index].position.y -= dy * this.data[index].position.z
-            if(this.data[index].position.x < MIN_WIDTH - 0.5) {
-                this.data[index].position.x = MAX_WIDTH + 0.5
-                this.data[index].position.y = Math.random() * MAX_HEIGHT
-            } else if(this.data[index].position.x > MAX_WIDTH + 0.5) {
-                this.data[index].position.x = MIN_WIDTH - 0.5
-                this.data[index].position.y = Math.random() * MAX_HEIGHT
-            } if(this.data[index].position.y < MIN_HEIGHT - 0.5) {
-                this.data[index].position.y = MAX_HEIGHT + 0.5
-                this.data[index].position.x = Math.random() * MAX_WIDTH
-            } else if(this.data[index].position.y > MAX_HEIGHT + 0.5) {
-                this.data[index].position.y = MIN_HEIGHT - 0.5
-                this.data[index].position.x = Math.random() * MAX_WIDTH
+        if(key == PlayerStarshipStore.getKey()) {
+            for(var index = 0; index < this.data.length; index++) {
+                var datum = this.data[index]
+                datum.position.x -= dx * datum.position.z
+                datum.position.y -= dy * datum.position.z
+                if(datum.position.x < MIN_WIDTH - 0.5) {
+                    datum.position.x = MAX_WIDTH + 0.5
+                    datum.position.y = Math.random() * MAX_HEIGHT
+                } else if(datum.position.x > MAX_WIDTH + 0.5) {
+                    datum.position.x = MIN_WIDTH - 0.5
+                    datum.position.y = Math.random() * MAX_HEIGHT
+                } if(datum.position.y < MIN_HEIGHT - 0.5) {
+                    datum.position.y = MAX_HEIGHT + 0.5
+                    datum.position.x = Math.random() * MAX_WIDTH
+                } else if(datum.position.y > MAX_HEIGHT + 0.5) {
+                    datum.position.y = MIN_HEIGHT - 0.5
+                    datum.position.x = Math.random() * MAX_WIDTH
+                }
             }
         }
         this.retrigger()

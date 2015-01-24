@@ -8,8 +8,8 @@ var Starship = React.createClass({
         )
     },
     renderStyles: function() {
-        var my_data = StarshipStore.getMyData()
-        if(this.props.data.id == my_data.id) {
+        var player = StarshipStore.getPlayerData()
+        if(this.props.data.key == player.key) {
             return {
                 top: "0px",
                 left: "0px",
@@ -19,8 +19,8 @@ var Starship = React.createClass({
             }
         } else {
             return {
-                left: (my_data.position.x * -1) - this.props.data.position.x + (MAX_WIDTH / 2) - 0.5 + "em",
-                top: (my_data.position.y * -1) - this.props.data.position.y + (MAX_HEIGHT / 2) - 0.5 + "em"
+                left: -player.position.x - this.props.data.position.x + (MAX_WIDTH / 2) - 0.5 + "em",
+                top: -player.position.y - this.props.data.position.y + (MAX_HEIGHT / 2) - 0.5 + "em"
             }
         }
     },
