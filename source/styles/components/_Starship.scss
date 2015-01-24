@@ -1,5 +1,9 @@
-@mixin background-as-a-tile()
+@mixin tile()
 {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+
     background-size: 93%;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,24 +11,16 @@
 
 .starship
 {
-    width: 1em;
-    height: 1em;
+    @include tile();
 
-    position: absolute;
-    
-    @include background-as-a-tile();
     &.ancient {background-image: url("./assets/images/ancient.core.svg");}
     &.rebellion {background-image: url("./assets/images/rebellion.core.svg");}
     &.federation {background-image: url("./assets/images/federation.core.svg");}
 
     .module
     {
-        width: 1em;
-        height: 1em;
+        @include tile();
 
-        position: absolute;
-
-        @include background-as-a-tile();
         &.ancient.hull {background-image: url("./assets/images/ancient.hull.svg");}
         &.ancient.engine {background-image: url("./assets/images/ancient.engine.svg");}
         &.ancient.turret {background-image: url("./assets/images/ancient.turret.svg");}
