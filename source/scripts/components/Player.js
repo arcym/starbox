@@ -19,8 +19,8 @@ var Player = React.createClass({
             }
         } else {
             return {
-                left: -my_data.position.x - this.props.data.position.x - (MAX_WIDTH / 2) - 0.5 + "em",
-                top: -my_data.position.y - this.props.data.position.y - (MAX_HEIGHT / 2) - 0.5 + "em"
+                left: -my_data.position.x - this.props.data.position.x + (MAX_WIDTH / 2) - 0.5 + "em",
+                top: -my_data.position.y - this.props.data.position.y + (MAX_HEIGHT / 2) - 0.5 + "em"
             }
         }
     },
