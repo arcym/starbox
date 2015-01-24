@@ -8,13 +8,16 @@ var Player = React.createClass({
         )
     },
     renderStyles: function() {
-        return {
+        /*return {
             left: this.props.data.position.x - 0.5 + "em",
             top: this.props.data.position.y - 0.5 + "em"
-        }
+        }*/
     },
     renderClasses: function() {
-        return "player"
+        return React.addons.classSet({
+            player: true,
+            me: true
+        })
     }
 })
 

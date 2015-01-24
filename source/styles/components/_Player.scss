@@ -1,11 +1,20 @@
 .player
 {
-	width: 1em;
-	height: 1em;
+    width: 1em;
+    height: 1em;
 
-	position: absolute;
-	
-	background-color: red;
-	background-size: 100%;
-	background-image: url("./assets/images/hull.1.svg");
+    position: absolute;
+    
+    background-color: red;
+    background-size: 100%;
+    background-image: url("./assets/images/hull.1.svg");
+}
+
+.me.player
+{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
 }
