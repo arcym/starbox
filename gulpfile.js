@@ -39,7 +39,7 @@ gulp.task("scripts", function()
         .on('error', on_error)
         .pipe(vinyl_source("index.js"))
         .pipe(vinyl_buffer())
-        .pipe(gulp_if(is_gh_pages(), gulp_uglify()))
+        .pipe(gulp_if(is_ghpages(), gulp_uglify()))
         .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 });
@@ -50,7 +50,7 @@ gulp.task("styles", function()
         .pipe(gulp_sass())
         .on('error', on_error)
         .pipe(gulp_prefixify_css())
-        .pipe(gulp_if(is_gh_pages(), gulp_minify_css()))
+        .pipe(gulp_if(is_ghpages(), gulp_minify_css()))
         .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 })
@@ -58,7 +58,7 @@ gulp.task("styles", function()
 gulp.task("markup", function()
 {
     gulp.src("./source/index.html")
-        .pipe(gulp_if(is_gh_pages(), gulp_minify_html()))
+        .pipe(gulp_if(is_ghpages(), gulp_minify_html()))
         .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 })
@@ -84,6 +84,12 @@ gulp.task("configs", function()
 
 gulp.task("default", ["scripts", "styles", "markup", "assets", "configs"]);
 
+gulp.task("ghpages", function()
+{
+    process.env.platform = "ghpages"
+    gulp.start("default")
+})
+
 gulp.task("watch", function()
 {
     server.start({port: 1271, directory: "./gulps"})
@@ -95,9 +101,9 @@ gulp.task("watch", function()
     gulp.watch("./source/assets/**/*", ["assets"])
 })
 
-function is_gh_pages()
+function is_ghpages()
 {
-    return process.env.platform == "gh_pages"
+    return process.env.platform == "ghpages"
 }
 
 function on_error(error)
