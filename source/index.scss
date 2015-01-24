@@ -6,9 +6,10 @@
 @import "./styles/references/_Fonts.scss";
 @import "./styles/components/_GameFrame.scss";
 @import "./styles/components/_Player.scss";
+@import "./styles/components/_Star.scss";
 
 #game-frame
 {
     font-family: goldfish;
-    background-color: #EEE;
+    background-color: #222;
 }

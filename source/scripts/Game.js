@@ -1,18 +1,20 @@
+var Star = require("<scripts>/components/Star")
 var Player = require("<scripts>/components/Player")
 var GameFrame = require("<scripts>/components/GameFrame")
 
-var LoopStore = require("<scripts>/stores/LoopStore")
 var PlayerStore = require("<scripts>/stores/PlayerStore")
+var StarStore = require("<scripts>/stores/StarStore")
+
+var PlayerActions = require("<scripts>/actions/PlayerActions")
+
+var LoopStore = require("<scripts>/stores/LoopStore")
 var InputActionStore = require("<scripts>/stores/InputActionStore")
 var KeyboardInputStore = require("<scripts>/stores/KeyboardInputStore")
 
-var LoopActions = require("<scripts>/actions/LoopActions")
-var KeyboardInputActions = require("<scripts>/actions/KeyboardInputActions")
-var PlayerActions = require("<scripts>/actions/PlayerActions")
-
 var Game = React.createClass({
 	mixins: [
-		Reflux.connect(PlayerStore, "players")
+		Reflux.connect(PlayerStore, "players"),
+		Reflux.connect(StarStore, "stars")
 	],
 	componentDidMount: function() {
 		InputActionStore.addAction("w", PlayerActions.PlayerMoveNorth)
@@ -23,6 +25,7 @@ var Game = React.createClass({
 	render: function() {
 		return (
 			<GameFrame>
+				{this.renderStore(this.state["stars"], Star)}
 				{this.renderStore(this.state["players"], Player)}
 			</GameFrame>
 		)
