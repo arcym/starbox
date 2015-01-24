@@ -18,7 +18,6 @@ var Player = React.createClass({
                 margin: "auto"
             }
         } else {
-            console.log(my_data.position.x, this.props.data.position.x)
             return {
                 left: -my_data.position.x - this.props.data.position.x - (MAX_WIDTH / 2) - 0.5 + "em",
                 top: -my_data.position.y - this.props.data.position.y - (MAX_HEIGHT / 2) - 0.5 + "em"
