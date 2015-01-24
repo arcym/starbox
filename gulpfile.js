@@ -40,7 +40,7 @@ gulp.task("scripts", function()
         .pipe(vinyl_source("index.js"))
         .pipe(vinyl_buffer())
         .pipe(gulp_if(is_gh_pages(), gulp_uglify()))
-        .pipe(gulp.dest("./builds"))
+        .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 });
 
@@ -51,7 +51,7 @@ gulp.task("styles", function()
         .on('error', on_error)
         .pipe(gulp_prefixify_css())
         .pipe(gulp_if(is_gh_pages(), gulp_minify_css()))
-        .pipe(gulp.dest("./builds"))
+        .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 })
 
@@ -59,14 +59,14 @@ gulp.task("markup", function()
 {
     gulp.src("./source/index.html")
         .pipe(gulp_if(is_gh_pages(), gulp_minify_html()))
-        .pipe(gulp.dest("./builds"))
+        .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 })
 
 gulp.task("assets", function()
 {
     gulp.src("./source/assets/**/*", {base: "./source"})
-        .pipe(gulp.dest("./builds"))
+        .pipe(gulp.dest("./gulps"))
         .pipe(gulp_livereload())
 })
 
@@ -79,14 +79,14 @@ gulp.task("configs", function()
             delete data["devDependencies"]
             return data
         }, 2))
-        .pipe(gulp.dest("./builds"))
+        .pipe(gulp.dest("./gulps"))
 })
 
 gulp.task("default", ["scripts", "styles", "markup", "assets", "configs"]);
 
 gulp.task("watch", function()
 {
-    server.start({port: 1271, directory: "./builds"})
+    server.start({port: 1271, directory: "./gulps"})
     gulp_livereload.listen()
 
     gulp.watch("./source/**/*.js", ["scripts"])
