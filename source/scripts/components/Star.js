@@ -9,8 +9,8 @@ var Star = React.createClass({
         return {
             left: this.props.data.position.x + "em",
             top: this.props.data.position.y + "em",
-            width: this.props.data.position.z * 0.2 + "em",
-            height: this.props.data.position.z * 0.2 + "em"
+            width: this.props.data.position.z * 0.1 + "em",
+            height: this.props.data.position.z * 0.1 + "em"
         }
     },
     renderClasses: function() {
