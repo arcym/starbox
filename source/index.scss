@@ -2,3 +2,10 @@
 {
     margin: 0px;
 }
+
+@import "./styles/_GameFrame.scss";
+
+#game-frame
+{
+    background-color: red;
+}

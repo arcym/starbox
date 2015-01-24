@@ -28,5 +28,9 @@
     "reactify": "~0.17.1",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2",
+    "reflux": "^0.2.3"
   }
 }

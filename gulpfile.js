@@ -91,6 +91,8 @@ gulp.task("watch", function()
 
     gulp.watch("./source/**/*.js", ["scripts"])
     gulp.watch("./source/**/*.scss", ["styles"])
+    gulp.watch("./source/index.html", ["markup"])
+    gulp.watch("./source/assets/**/*", ["assets"])
 })
 
 function is_gh_pages()
@@ -98,7 +100,7 @@ function is_gh_pages()
     return process.env.platform == "gh_pages"
 }
 
-function on_error()
+function on_error(error)
 {
     gulp_util.log(chalk.bold.red(error.message))
     gulp_util.beep()
