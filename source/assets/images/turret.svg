@@ -2,7 +2,7 @@
 <!-- generated at drububu.com  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16">
-<path d="M0 0h16v16h-4v-2h-1v-2h-1v-11h-1v6h-2v-6h-1v11h-1v2h-1v2h-4z" fill="rgb(255,0,255)"/>
+<path d="M0 0h16v16h-4v-2h-1v-2h-1v-11h-1v6h-2v-6h-1v11h-1v2h-1v2h-4z" fill="rgb(0,0,0)"/>
 <path d="M6 1h1v1h-1z" fill="rgb(58,56,56)"/>
 <path d="M9 1h1v1h-1z" fill="rgb(58,56,56)"/>
 <path d="M6 2h1v1h-1z" fill="rgb(78,78,78)"/>
@@ -18,7 +18,7 @@
 <path d="M7 8h2v1h-2z" fill="rgb(110,110,110)"/>
 <path d="M9 8h1v1h-1z" fill="rgb(100,98,98)"/>
 <path d="M6 9h1v2h-1z" fill="rgb(78,78,78)"/>
-<path d="M7 9h2v1h-2z" fill="rgb(129,37,16)"/>
+<path d="M7 9h2v1h-2z" fill="rgb(128,34,17)"/>
 <path d="M9 9h1v2h-1z" fill="rgb(78,78,78)"/>
 <path d="M7 10h2v1h-2z" fill="rgb(89,89,89)"/>
 <path d="M6 11h1v1h-1z" fill="rgb(68,68,68)"/>

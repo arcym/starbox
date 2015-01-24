@@ -3,8 +3,6 @@
     background-size: 93%;
     background-position: center;
     background-repeat: no-repeat;
-
-    background-color: red;
 }
 
 .starship
@@ -22,7 +20,7 @@
         width: 1em;
         height: 1em;
 
-        position: relative;
+        position: absolute;
 
         @include background-as-a-tile();
         &.hull {background-image: url("./assets/images/hull.svg");}

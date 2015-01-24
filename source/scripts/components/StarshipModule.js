@@ -13,7 +13,10 @@ var StarshipModule = React.createClass({
     },
     renderClasses: function() {
         return React.addons.classSet({
-            module: true
+            module: true,
+            hull: this.props.data.type == "hull",
+            engine: this.props.data.type == "engine",
+            turret: this.props.data.type == "turret"
         })
     }
 })

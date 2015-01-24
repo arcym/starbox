@@ -25,6 +25,48 @@ var StarshipStore = Reflux.createStore({
                         x: -1,
                         y: 0
                     }
+                },
+                {
+                    type: "hull",
+                    position: {
+                        x: 1,
+                        y: 0
+                    }
+                },
+                {
+                    type: "hull",
+                    position: {
+                        x: 0,
+                        y: -1
+                    }
+                },
+                {
+                    type: "hull",
+                    position: {
+                        x: 0,
+                        y: 1
+                    }
+                },
+                {
+                    type: "turret",
+                    position: {
+                        x: 0,
+                        y: -2
+                    }
+                },
+                {
+                    type: "engine",
+                    position: {
+                        x: -1,
+                        y: 1
+                    }
+                },
+                {
+                    type: "engine",
+                    position: {
+                        x: 1,
+                        y: 1
+                    }
                 }
             ]
         },
