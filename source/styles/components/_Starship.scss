@@ -1,3 +1,12 @@
+@mixin background-as-a-tile()
+{
+    background-size: 93%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: red;
+}
+
 .starship
 {
     width: 1em;
@@ -5,7 +14,19 @@
 
     position: absolute;
     
-    background-size: 100%;
-    background-image: url("./assets/images/turret.svg");
-    background-color: white;
+    @include background-as-a-tile();
+    background-image: url("./assets/images/core.svg");
+
+    .module
+    {
+        width: 1em;
+        height: 1em;
+
+        position: relative;
+
+        @include background-as-a-tile();
+        &.hull {background-image: url("./assets/images/hull.svg");}
+        &.engine {background-image: url("./assets/images/engine.svg");}
+        &.turret {background-image: url("./assets/images/turret.svg");}
+    }
 }

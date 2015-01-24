@@ -17,18 +17,28 @@ var StarshipStore = Reflux.createStore({
             velocity: {
                 x: 0,
                 y: 0
-            }
+            },
+            modules: [
+                {
+                    type: "hull",
+                    position: {
+                        x: -1,
+                        y: 0
+                    }
+                }
+            ]
         },
         1: {
             key: 1,
             position: {
-                x: 0,
-                y: 0
+                x: -3,
+                y: -3
             },
             velocity: {
                 x: 0,
                 y: 0
-            }
+            },
+            modules: []
         }
     },
     getData: function() {
@@ -75,7 +85,7 @@ var StarshipStore = Reflux.createStore({
     },
     onTick: function(tick) {
         var key = PlayerStarshipStore.getKey()
-        
+
         var dx = this.data[key].velocity.x * tick
         var dy = this.data[key].velocity.y * tick
         StarshipActions.StarshipMove(key, dx, dy)
@@ -104,6 +114,7 @@ var StarshipStore = Reflux.createStore({
                 this.data[key].velocity.y = 0
             }
         }
+        
         this.retrigger()
     }
 })

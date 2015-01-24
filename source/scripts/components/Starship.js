@@ -1,10 +1,13 @@
 var StarshipStore = require("<scripts>/stores/StarshipStore")
+var StarshipModule = require("<scripts>/components/StarshipModule")
 
 var Starship = React.createClass({
     render: function() {
         return (
             <div style={this.renderStyles()}
-                 className={this.renderClasses()}/>
+                 className={this.renderClasses()}>
+                 {this.renderModules()}
+            </div>
         )
     },
     renderStyles: function() {
@@ -19,8 +22,8 @@ var Starship = React.createClass({
             }
         } else {
             return {
-                left: -player.position.x - this.props.data.position.x + (MAX_WIDTH / 2) - 0.5 + "em",
-                top: -player.position.y - this.props.data.position.y + (MAX_HEIGHT / 2) - 0.5 + "em"
+                left: this.props.data.position.x - player.position.x + (MAX_WIDTH / 2) - 0.5 + "em",
+                top: this.props.data.position.y - player.position.y + (MAX_HEIGHT / 2) - 0.5 + "em"
             }
         }
     },
@@ -28,6 +31,14 @@ var Starship = React.createClass({
         return React.addons.classSet({
             starship: true
         })
+    },
+    renderModules: function() {
+        var renderings = []
+        for(var index = 0; index < this.props.data.modules.length; index++) {
+            var data = this.props.data.modules[index]
+            renderings.push(<StarshipModule key={index} data={data}/>) 
+        }
+        return renderings
     }
 })
 
