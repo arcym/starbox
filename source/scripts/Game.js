@@ -1,7 +1,12 @@
 var Player = require("<scripts>/components/Player")
 var GameFrame = require("<scripts>/components/GameFrame")
 
+var LoopStore = require("<scripts>/stores/LoopStore")
 var PlayerStore = require("<scripts>/stores/PlayerStore")
+var KeyboardInputStore = require("<scripts>/stores/KeyboardInputStore")
+
+var LoopActions = require("<scripts>/actions/LoopActions")
+var KeyboardInputActions = require("<scripts>/actions/KeyboardInputActions")
 
 var Game = React.createClass({
 	mixins: [

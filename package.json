@@ -30,6 +30,7 @@
     "vinyl-source-stream": "~1.0.0"
   },
   "dependencies": {
+    "raf": "^2.0.4",
     "react": "^0.12.2",
     "reflux": "^0.2.3"
   }
