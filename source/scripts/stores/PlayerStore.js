@@ -49,10 +49,15 @@ var PlayerStore = Reflux.createStore({
             this.data[0].velocity.x = +maximum_velocity
         }
     },
+    onPlayerMove: function(dx, dy) {
+        this.data[0].position.x += dx
+        this.data[0].position.y += dy
+    },
     onTick: function(tick) {
         var datum = this.data[0]
-        datum.position.x += datum.velocity.x * tick
-        datum.position.y += datum.velocity.y * tick
+        var dx = datum.velocity.x * tick
+        var dy = datum.velocity.y * tick
+        PlayerActions.PlayerMove(dx, dy)
 
         if(datum.velocity.x < 0) {
             datum.velocity.x += deacceleration * tick
