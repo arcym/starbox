@@ -1,6 +1,6 @@
-var PlayerStore = require("<scripts>/stores/PlayerStore")
+var StarshipStore = require("<scripts>/stores/StarshipStore")
 
-var Player = React.createClass({
+var Starship = React.createClass({
     render: function() {
         return (
             <div style={this.renderStyles()}
@@ -8,7 +8,7 @@ var Player = React.createClass({
         )
     },
     renderStyles: function() {
-        var my_data = PlayerStore.getMyData()
+        var my_data = StarshipStore.getMyData()
         if(this.props.data.id == my_data.id) {
             return {
                 top: "0px",
@@ -26,9 +26,9 @@ var Player = React.createClass({
     },
     renderClasses: function() {
         return React.addons.classSet({
-            player: true
+            starship: true
         })
     }
 })
 
-module.exports = Player
+module.exports = Starship

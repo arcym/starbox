@@ -1,4 +1,4 @@
-var PlayerActions = require("<scripts>/actions/PlayerActions")
+var StarshipActions = require("<scripts>/actions/StarshipActions")
 var GameStore = require("<scripts>/stores/GameStore")
 
 var colors = [
@@ -32,9 +32,9 @@ var StarStore = Reflux.createStore({
         }
     },
     listenables: [
-        PlayerActions
+        StarshipActions
     ],
-    onPlayerMove: function(key, dx, dy) {
+    onStarshipMove: function(key, dx, dy) {
         if(key == GameStore.getData().my_id)
         for(var index = 0; index < this.data.length; index++) {
             this.data[index].position.x -= dx * this.data[index].position.z

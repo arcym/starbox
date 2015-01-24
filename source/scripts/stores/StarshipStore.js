@@ -1,5 +1,5 @@
 var LoopActions = require("<scripts>/actions/LoopActions")
-var PlayerActions = require("<scripts>/actions/PlayerActions")
+var StarshipActions = require("<scripts>/actions/StarshipActions")
 var GameStore = require("<scripts>/stores/GameStore")
 
 var acceleration = 2
@@ -40,37 +40,37 @@ var PlayerStore = Reflux.createStore({
     },
     listenables: [
         LoopActions,
-        PlayerActions
+        StarshipActions
     ],
-    onPlayerPushNorth: function(tick) {
+    onStarshipPushNorth: function(tick) {
         var my_id = GameStore.getData().my_id
         this.data[my_id].velocity.y -= acceleration * tick
         if(this.data[my_id].velocity.y < -maximum_velocity) {
             this.data[my_id].velocity.y = -maximum_velocity
         }
     },
-    onPlayerPushSouth: function(tick) {
+    onStarshipPushSouth: function(tick) {
         var my_id = GameStore.getData().my_id
         this.data[my_id].velocity.y += acceleration * tick
         if(this.data[my_id].velocity.y > +maximum_velocity) {
             this.data[my_id].velocity.y = +maximum_velocity
         }
     },
-    onPlayerPushWest: function(tick) {
+    onStarshipPushWest: function(tick) {
         var my_id = GameStore.getData().my_id
         this.data[my_id].velocity.x -= acceleration * tick
         if(this.data[my_id].velocity.x < -maximum_velocity) {
             this.data[my_id].velocity.x = -maximum_velocity
         }
     },
-    onPlayerPushEast: function(tick) {
+    onStarshipPushEast: function(tick) {
         var my_id = GameStore.getData().my_id
         this.data[my_id].velocity.x += acceleration * tick
         if(this.data[my_id].velocity.x > +maximum_velocity) {
             this.data[my_id].velocity.x = +maximum_velocity
         }
     },
-    onPlayerMove: function(key, dx, dy) {
+    onStarshipMove: function(key, dx, dy) {
         this.data[key].position.x += dx
         this.data[key].position.y += dy
     },
@@ -80,7 +80,7 @@ var PlayerStore = Reflux.createStore({
         var datum = this.data[my_id]
         var dx = datum.velocity.x * tick
         var dy = datum.velocity.y * tick
-        PlayerActions.PlayerMove(my_id, dx, dy)
+        StarshipActions.StarshipMove(my_id, dx, dy)
 
         if(datum.velocity.x < 0) {
             datum.velocity.x += deacceleration * tick
