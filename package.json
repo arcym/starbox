@@ -1,5 +1,5 @@
 {
-  "name": "retitle",
+  "name": "starbox",
   "version": "0.0.1",
   "author": {
     "name": "Andrew McPherson",
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arcym/retitle.git"
+    "url": "https://github.com/arcym/starbox.git"
   },
   "devDependencies": {
     "aliasify": "~1.5.0",
