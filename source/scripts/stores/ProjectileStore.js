@@ -57,9 +57,9 @@ var ProjectileStore = Reflux.createStore({
                         starship.damage -= 1
                         if(starship.damage <= 0) {
                             StarshipActions.DestroyStarship(j)
-                            //PLAY EXPLOSION SOUND HERE
+                            new Audio("./assets/sounds/explosion.wav").play()
                         } else {
-                            //PLAY SPECIAL HURT SOUND HERE
+                            new Audio("./assets/sounds/hurtcore.wav").play()
                         }
                     }
                     for(var k in starship.modules) {
@@ -82,7 +82,7 @@ var ProjectileStore = Reflux.createStore({
                             module.damage -= 1
                             if(module.damage <= 0) {
                                 StarshipActions.DestroyModule(j, k)
-                                //PLAY EXPLOSION SOUND HERE
+                                new Audio("./assets/sounds/explosion.wav").play()
                             } else {
                                 var sound = Math.floor(Math.random() * 6)
                                 new Audio("./assets/sounds/hurt" + sound + ".wav").play()
