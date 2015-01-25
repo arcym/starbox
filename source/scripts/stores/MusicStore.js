@@ -19,7 +19,7 @@ var MusicStore = Reflux.createStore({
         {
             MusicStore.playMusic()
         })
-        audio.play()
+        //audio.play()
     }
 })
 

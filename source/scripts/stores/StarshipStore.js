@@ -7,6 +7,9 @@ var acceleration = 2
 var deacceleration = 0.25
 var maximum_velocity = 3
 
+var engine_sound = new Audio("./assets/sounds/engine.wav")
+engine_sound.play()
+
 var StarshipStore = Reflux.createStore({
     data: {
         0: {
@@ -278,6 +281,11 @@ var StarshipStore = Reflux.createStore({
             this.data[key].velocity.y = -maximum_velocity
         } else if(this.data[key].velocity.y > maximum_velocity) {
             this.data[key].velocity.y = maximum_velocity
+        }
+
+        if(engine_sound.ended) {
+            engine_sound.play()
+            console.log("!");
         }
     },
     onStarshipDeaccelerate: function(tick) {

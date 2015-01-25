@@ -28,6 +28,8 @@ var ProjectileStore = Reflux.createStore({
             starship: starship,
             time: 0
         }
+        var sound = Math.floor(Math.random() * 6)
+        new Audio("./assets/sounds/laser" + sound + ".wav").play()
     },
     onRemoveProjectile: function(key) {
         delete this.data[key]
@@ -66,6 +68,8 @@ var ProjectileStore = Reflux.createStore({
                         var ydist = projectile.position.y - y
                         var dist = Math.sqrt(xdist * xdist + ydist * ydist)
                         if(dist < 0.05 + 0.5) {
+                            var sound = Math.floor(Math.random() * 6)
+                            new Audio("./assets/sounds/hurt" + sound + ".wav").play()
                             ProjectileActions.RemoveProjectile(i)
                         }
                     }
