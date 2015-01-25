@@ -37,5 +37,11 @@
     "raf": "^2.0.4",
     "react": "^0.12.2",
     "reflux": "^0.2.3"
+  },
+  "window": {
+    "title": "Starbpx",
+    "toolbar": false,
+    "width": 640,
+    "height": 360
   }
 }
