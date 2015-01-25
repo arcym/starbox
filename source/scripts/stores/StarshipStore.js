@@ -137,7 +137,7 @@ var StarshipStore = Reflux.createStore({
         if(this.data[key].cooldown <= 0) {
             this.data[key].cooldown = 0.5
             var modules = this.data[key].modules
-            for(var index = 0; index < modules.length; index++) {
+            for(var index in modules) {
                 var module = modules[index]
                 if(module.category == "turret") {
                     var x = module.position.x
@@ -194,8 +194,8 @@ var StarshipStore = Reflux.createStore({
         
         this.retrigger()
     },
-    onDestroyModule: function(key) {
-        console.log(key)
+    onDestroyModule: function(jey, key) {
+        delete this.data[jey].modules[key]
     },
     onDestroyStarship: function(key) {
         console.log(key)

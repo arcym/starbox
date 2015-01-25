@@ -1,6 +1,6 @@
 var CometStarshipModules = function(affiliation) {
-	return [
-        {
+	return {
+        "1": {
             category: "hull",
             affiliation: affiliation,
             position: {
@@ -9,7 +9,7 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        {
+        "2": {
             category: "hull",
             affiliation: affiliation,
             position: {
@@ -18,7 +18,7 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        {
+        "1.1": {
             category: "turret",
             affiliation: affiliation,
             position: {
@@ -27,7 +27,7 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        {
+        "2.1": {
             category: "turret",
             affiliation: affiliation,
             position: {
@@ -36,7 +36,7 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        {
+        "1.2": {
             category: "engine",
             affiliation: affiliation,
             position: {
@@ -45,7 +45,7 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        {
+        "2.2": {
             category: "engine",
             affiliation: affiliation,
             position: {
@@ -54,7 +54,7 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         }
-    ]
+    }
 }
 
 module.exports = CometStarshipModules

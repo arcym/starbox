@@ -81,7 +81,7 @@ var ProjectileStore = Reflux.createStore({
                             ProjectileActions.RemoveProjectile(i)
                             module.damage -= 1
                             if(module.damage <= 0) {
-                                StarshipActions.DestroyModule(k)
+                                StarshipActions.DestroyModule(j, k)
                                 //PLAY EXPLOSION SOUND HERE
                             } else {
                                 var sound = Math.floor(Math.random() * 6)
