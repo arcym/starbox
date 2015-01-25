@@ -9,6 +9,11 @@
 @import "./styles/components/_Star.scss";
 @import "./styles/components/_Starmap.scss";
 
+body
+{
+	background-color: #111;
+}
+
 #game-frame
 {
     font-family: goldfish;

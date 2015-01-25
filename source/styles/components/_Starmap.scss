@@ -1,35 +1,116 @@
+$space-blue: #467F97;
+$dark-space-blue: #143753;
+
+@keyframes rotating
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fading
+{
+    from
+    {
+        opacity: 1;
+    }
+
+    to
+    {
+        opacity: 0;
+    }
+}
+
 .starmap
 {
-	z-index: 2;
-	top: 2em;
-	right: 2em;
-	width: 25em;
-	height: 25em;
-	position: absolute;
+    z-index: 2;
+    top: 2em;
+    right: 2em;
+    width: 25em;
+    height: 25em;
+    position: absolute;
 
-	font-size: 0.125em;
+    font-size: 0.125em;
 
-	border-style: solid;
-	border-width: 1em;
-    border-radius: 10em;
-	border-color: #143753;
+    border-width: 1em;
+    border-radius: 15em;
+    border-style: solid;
+    border-color: $dark-space-blue;
 
-	overflow: hidden;
-	background-color: #467F97;
+    overflow: hidden;
+    background-color: $space-blue;
 
-	.starship-blip
-	{
-		width: 1em;
-		height: 1em;
+    .starship-blip
+    {
+        width: 1em;
+        height: 1em;
 
-		position: absolute;
+        position: absolute;
 
-		border-radius: 3em;
-		background-color: red;
+        border-radius: 5em;
+        background-color: red;
 
-		&.ancient {background-color: #444}
-		&.rebellion {background-color: #3F2A14}
-		&.federation {background-color: #BBB}
-		&.locust {background-color: #6B238E}
-	}
+        &.ancient {background-color: #444}
+        &.rebellion {background-color: #3F2A14}
+        &.federation {background-color: #BBB}
+        &.locust {background-color: #6B238E}
+
+        &:not(.player)
+        {
+            animation-duration: 5s;
+            animation-name: fading;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .radar
+    {
+        top: 0em;
+        left: 0em;
+        right: 0em;
+        bottom: 0em;
+        margin: auto;
+        position: absolute;
+
+        width: 0em;
+        height: 13em;
+        margin-bottom: -1em;
+
+        transform-origin: 50% 0%;
+
+        border-width: 0.5em;
+        border-style: dashed;
+        border-color: $dark-space-blue;
+
+        animation-duration: 5s;
+        animation-name: rotating;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .circle
+    {
+        top: 0em;
+        left: 0em;
+        right: 0em;
+        bottom: 0em;
+        margin: auto;
+        position: absolute;
+
+        opacity: 0.25;
+
+        border-width: 0.5em;
+        border-style: solid;
+        border-radius: 15em;
+
+        &:nth-of-type(2) {width: 66%; height: 66%;}
+        &:nth-of-type(3) {width: 33%; height: 33%;}
+    }
 }
