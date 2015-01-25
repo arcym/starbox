@@ -18,6 +18,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
+            rotation: 0,
             affiliation: "federation",
             modules: [
                 {
@@ -88,6 +89,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
+            rotation: 0,
             affiliation: "rebellion",
             modules: [
                 {
@@ -134,6 +136,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
+            rotation: 0,
             affiliation: "ancient",
             modules: [
                 {
@@ -197,32 +200,26 @@ var StarshipStore = Reflux.createStore({
         LoopActions,
         StarshipActions
     ],
-    onStarshipPushNorth: function(tick) {
+    /*onStarshipAccelerate: function(tick) {
         var key = PlayerStarshipStore.getKey()
+        this.data[key].velocity.x = 
         this.data[key].velocity.y -= acceleration * tick
         if(this.data[key].velocity.y < -maximum_velocity) {
             this.data[key].velocity.y = -maximum_velocity
         }
-    },
-    onStarshipPushSouth: function(tick) {
+    },*/
+    onStarshipRotateLeft: function(tick) {
         var key = PlayerStarshipStore.getKey()
-        this.data[key].velocity.y += acceleration * tick
-        if(this.data[key].velocity.y > +maximum_velocity) {
-            this.data[key].velocity.y = +maximum_velocity
+        this.data[key].rotation -= 45*1.5 * tick
+        if(this.data[key].rotation < 0) {
+            this.data[key].rotation += 360
         }
     },
-    onStarshipPushWest: function(tick) {
+    onStarshipRotateRight: function(tick) {
         var key = PlayerStarshipStore.getKey()
-        this.data[key].velocity.x -= acceleration * tick
-        if(this.data[key].velocity.x < -maximum_velocity) {
-            this.data[key].velocity.x = -maximum_velocity
-        }
-    },
-    onStarshipPushEast: function(tick) {
-        var key = PlayerStarshipStore.getKey()
-        this.data[key].velocity.x += acceleration * tick
-        if(this.data[key].velocity.x > +maximum_velocity) {
-            this.data[key].velocity.x = +maximum_velocity
+        this.data[key].rotation += 45 * tick
+        if(this.data[key].rotation > 360) {
+            this.data[key].rotation -= 360
         }
     },
     onStarshipMove: function(key, dx, dy) {

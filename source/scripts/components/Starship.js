@@ -18,12 +18,14 @@ var Starship = React.createClass({
                 left: "0px",
                 right: "0px",
                 bottom: "0px",
-                margin: "auto"
+                margin: "auto",
+                transform: "rotate(" + this.props.data.rotation + "deg)"
             }
         } else {
             return {
                 left: this.props.data.position.x - player.position.x + (MAX_WIDTH / 2) - 0.5 + "em",
-                top: this.props.data.position.y - player.position.y + (MAX_HEIGHT / 2) - 0.5 + "em"
+                top: this.props.data.position.y - player.position.y + (MAX_HEIGHT / 2) - 0.5 + "em",
+                transform: "rotate(" + this.props.data.rotation + "deg)"
             }
         }
     },

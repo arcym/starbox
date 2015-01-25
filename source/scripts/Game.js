@@ -16,10 +16,11 @@ var Game = React.createClass({
 		Reflux.connect(StarStore, "stars")
 	],
 	componentDidMount: function() {
-		InputActionStore.addAction("w", StarshipActions.StarshipPushNorth)
-		InputActionStore.addAction("s", StarshipActions.StarshipPushSouth)
-		InputActionStore.addAction("a", StarshipActions.StarshipPushWest)
-		InputActionStore.addAction("d", StarshipActions.StarshipPushEast)
+		InputActionStore.addAction("w", StarshipActions.StarshipAccelerate)
+		InputActionStore.addAction("s", StarshipActions.StarshipDeaccelerate)
+		InputActionStore.addAction("a", StarshipActions.StarshipRotateLeft)
+		InputActionStore.addAction("d", StarshipActions.StarshipRotateRight)
+		InputActionStore.addAction("space bar", StarshipActions.StarshipFireTurrets)
 	},
 	render: function() {
 		return (
