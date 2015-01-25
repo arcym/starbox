@@ -1,9 +1,10 @@
-cache
 node_modules
 bower_components
+node_webkit_cache
 
 gulps
 ghpages
+nwapps
 
 .DS_Store
 *.log

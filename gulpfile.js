@@ -102,13 +102,15 @@ gulp.task("ghpages", function()
 gulp.task("nwapp", function()
 {
     var nw = new NodeWebkitBuilder({
-        files: "./builds/nw/**/*",
+        files: "./gulps/**/*",
         platforms: [
             "win32", "win64",
             "osx32", "osx64",
             "linux32", "linux64"
         ],
-        buildType: "versioned"
+        cacheDir: "node_webkit_cache",
+        buildType: "versioned",
+        buildDir: "nwapps"
     })
     
     nw.on("log", console.log)
