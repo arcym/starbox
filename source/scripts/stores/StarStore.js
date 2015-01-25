@@ -32,16 +32,16 @@ var StarStore = Reflux.createStore({
                 datum.position.x -= dx * datum.position.z
                 datum.position.y -= dy * datum.position.z
                 if(datum.position.x < MIN_WIDTH - 0.5) {
-                    datum.position.x = MAX_WIDTH + 0.5
+                    datum.position.x += MAX_WIDTH + 0.5
                     datum.position.y = Math.random() * MAX_HEIGHT
                 } else if(datum.position.x > MAX_WIDTH + 0.5) {
-                    datum.position.x = MIN_WIDTH - 0.5
+                    datum.position.x -= MAX_WIDTH + 0.5
                     datum.position.y = Math.random() * MAX_HEIGHT
                 } if(datum.position.y < MIN_HEIGHT - 0.5) {
-                    datum.position.y = MAX_HEIGHT + 0.5
+                    datum.position.y += MAX_HEIGHT + 0.5
                     datum.position.x = Math.random() * MAX_WIDTH
                 } else if(datum.position.y > MAX_HEIGHT + 0.5) {
-                    datum.position.y = MIN_HEIGHT - 0.5
+                    datum.position.y -= MAX_HEIGHT + 0.5
                     datum.position.x = Math.random() * MAX_WIDTH
                 }
             }
