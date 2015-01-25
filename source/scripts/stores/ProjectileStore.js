@@ -12,13 +12,13 @@ var ProjectileStore = Reflux.createStore({
         ProjectileActions,
         LoopActions
     ],
-    onAddProjectile: function(starship) {
+    onAddProjectile: function(starship, x, y) {
         var key = UUID.v4()
         this.data[key] = {
             key: key,
             position: {
-                x: starship.position.x,
-                y: starship.position.y
+                x: x || starship.position.x,
+                y: y || starship.position.y
             },
             velocity: {
                 x: starship.velocity.x + (10 * Math.sin(starship.rotation * (Math.PI/180))),
@@ -52,9 +52,9 @@ var ProjectileStore = Reflux.createStore({
                     if(dist < 0.05 + 0.5) {
                         ProjectileActions.RemoveProjectile(i)
                     }
-                    /*for(var index = 0; index < starship.modules.length; index++) {
+                    for(var index = 0; index < starship.modules.length; index++) {
                         var module = starship.modules[index]
-                    }*/
+                    }
                 }
             }
         }

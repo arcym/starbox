@@ -268,7 +268,7 @@ var StarshipStore = Reflux.createStore({
     onStarshipAccelerate: function(tick) {
         var key = PlayerStarshipStore.getKey()
         this.data[key].velocity.x += Math.sin(this.data[key].rotation * (Math.PI/180))
-        this.data[key].velocity.y += Math.cos(this.data[key].rotation * (Math.PI/180)) * -1
+         this.data[key].velocity.y += Math.cos(this.data[key].rotation * (Math.PI/180)) * -1
 
         if(this.data[key].velocity.x < -maximum_velocity) {
             this.data[key].velocity.x = -maximum_velocity
@@ -315,12 +315,14 @@ var StarshipStore = Reflux.createStore({
             for(var index = 0; index < modules.length; index++) {
                 var module = modules[index]
                 if(module.category == "turret") {
-                    //var x = module.position.x
-                    //var y = module.position.y
-                    //x *= Math.sin(this.data[key].rotation * (Math.PI/180))
-                    //y *= Math.sin(this.data[key].rotation * (Math.PI/180))
-
-                    ProjectileActions.AddProjectile(this.data[key])
+                    var x = module.position.x
+                    var y = module.position.y
+                    var m = Math.sqrt(x * x + y * y)
+                    x = m * Math.sin(this.data[key].rotation * (Math.PI/180))
+                    y = m * Math.cos(this.data[key].rotation * (Math.PI/180)) * -1
+                    x += this.data[key].position.x
+                    y += this.data[key].position.y
+                    ProjectileActions.AddProjectile(this.data[key], x, y)
                 }
             }
         }
