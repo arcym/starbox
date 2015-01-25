@@ -197,11 +197,14 @@ var StarshipStore = Reflux.createStore({
                 }
             } else {
                 var xdist = this.data[pkey].position.x - this.data[key].position.x
-                var ydist = this.data[pkey].position.x - this.data[key].position.x
+                var ydist = this.data[pkey].position.y - this.data[key].position.y
                 var dist = Math.sqrt(xdist * xdist + ydist * ydist)
+                if(dist < 10) {
+                    this.data[key].rotation -= 1
+                }
                 if(dist < 5) { //if the hero is near!
                     if(this.data[key].cooldown <= 0) {
-                        this.data[key].cooldown = 1.5
+                        this.data[key].cooldown = 1
                         var modules = this.data[key].modules
                         for(var index in modules) {
                             var module = modules[index]
