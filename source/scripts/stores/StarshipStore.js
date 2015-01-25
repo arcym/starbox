@@ -36,7 +36,7 @@ var StarshipStore = Reflux.createStore({
         1: {
             key: 1,
             position: {
-                x: -7,
+                x: -6,
                 y: -7
             },
             velocity: {
@@ -53,7 +53,7 @@ var StarshipStore = Reflux.createStore({
             key: 2,
             position: {
                 x: 7,
-                y: 7
+                y: 9
             },
             velocity: {
                 x: 0,
@@ -68,7 +68,7 @@ var StarshipStore = Reflux.createStore({
         3: {
             key: 3,
             position: {
-                x: -7,
+                x: -8,
                 y: 7
             },
             velocity: {
@@ -79,8 +79,24 @@ var StarshipStore = Reflux.createStore({
             affiliation: "locust",
             cooldown: 0,
             damage: 4,
-            modules: CometStarshipModules("locust")
-        }
+            modules: GalaxyStarshipModules("locust")
+        },
+        4: {
+            key: 4,
+            position: {
+                x: 9,
+                y: -8
+            },
+            velocity: {
+                x: 0,
+                y: 0
+            },
+            rotation: -12.5,
+            affiliation: "federation",
+            cooldown: 0,
+            damage: 4,
+            modules: CometStarshipModules("federation")
+        },
     },
     getData: function() {
         return this.data
@@ -200,7 +216,7 @@ var StarshipStore = Reflux.createStore({
                 var ydist = this.data[pkey].position.y - this.data[key].position.y
                 var dist = Math.sqrt(xdist * xdist + ydist * ydist)
                 if(dist < 10) {
-                    this.data[key].rotation -= 1
+                    this.data[key].rotation -= 0.01
                 }
                 if(dist < 5) { //if the hero is near!
                     if(this.data[key].cooldown <= 0) {
