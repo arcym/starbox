@@ -1,6 +1,7 @@
 {
   "name": "starbox",
   "version": "0.0.5",
+  "main": "index.html",
   "author": {
     "name": "Andrew McPherson",
     "email": "andrewmcp333@gmail.com"
