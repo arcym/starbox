@@ -214,28 +214,20 @@ var StarshipStore = Reflux.createStore({
                     category: "hull",
                     affiliation: "locust",
                     position: {
-                        x: -1,
-                        y: -1
-                    }
-                },
-                {
-                    category: "hull",
-                    affiliation: "locust",
-                    position: {
-                        x: -1,
-                        y: 1
-                    }
-                },
-                {
-                    category: "hull",
-                    affiliation: "locust",
-                    position: {
                         x: 1,
                         y: 0
                     }
                 },
                 {
-                    category: "hull",
+                    category: "turret",
+                    affiliation: "locust",
+                    position: {
+                        x: -1,
+                        y: -1
+                    }
+                },
+                {
+                    category: "turret",
                     affiliation: "locust",
                     position: {
                         x: 1,
@@ -243,43 +235,19 @@ var StarshipStore = Reflux.createStore({
                     }
                 },
                 {
-                    category: "hull",
+                    category: "engine",
                     affiliation: "locust",
                     position: {
-                        x: 1,
+                        x: -1,
                         y: 1
                     }
                 },
                 {
-                    category: "turret",
-                    affiliation: "locust",
-                    position: {
-                        x: -1,
-                        y: -2
-                    }
-                },
-                {
-                    category: "turret",
-                    affiliation: "locust",
-                    position: {
-                        x: 1,
-                        y: -2
-                    }
-                },
-                {
-                    category: "engine",
-                    affiliation: "locust",
-                    position: {
-                        x: -1,
-                        y: 2
-                    }
-                },
-                {
                     category: "engine",
                     affiliation: "locust",
                     position: {
                         x: 1,
-                        y: 2
+                        y: 1
                     }
                 }
             ]

@@ -16,11 +16,11 @@
    width="16px"
    height="16px"
    viewBox="0 0 16 16"
-   id="svg19195"
+   id="svg32957"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="locust.core.svg">
   <metadata
-     id="metadata19709">
+     id="metadata33433">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -31,7 +31,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs19707" />
+     id="defs33431" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -43,961 +43,937 @@
      inkscape:pageshadow="2"
      inkscape:window-width="640"
      inkscape:window-height="480"
-     id="namedview19705"
+     id="namedview33429"
      showgrid="false"
-     inkscape:zoom="41.7193"
-     inkscape:cx="1.8205608"
-     inkscape:cy="14.615627"
-     inkscape:window-x="208"
+     inkscape:zoom="14.75"
+     inkscape:cx="4.3835155"
+     inkscape:cy="2.7873016"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg19195" />
+     inkscape:current-layer="svg32957" />
   <path
      d="M3 0h1v1h-1z"
-     fill="rgb(205,136,236)"
-     id="path19201" />
+     fill="rgb(174,69,227)"
+     id="path32961" />
   <path
      d="M4 0h1v1h-1z"
-     fill="rgb(144,20,213)"
-     id="path19203" />
+     fill="rgb(139,0,212)"
+     id="path32963" />
   <path
      d="M5 0h1v1h-1z"
-     fill="rgb(120,20,172)"
-     id="path19205" />
+     fill="rgb(119,0,175)"
+     id="path32965" />
   <path
      d="M6 0h1v1h-1z"
-     fill="rgb(109,21,152)"
-     id="path19207" />
+     fill="rgb(108,6,155)"
+     id="path32967" />
   <path
      d="M7 0h1v1h-1z"
-     fill="rgb(116,22,167)"
-     id="path19209" />
+     fill="rgb(115,5,170)"
+     id="path32969" />
   <path
      d="M8 0h1v1h-1z"
-     fill="rgb(121,20,172)"
-     id="path19211" />
+     fill="rgb(120,0,175)"
+     id="path32971" />
   <path
      d="M9 0h1v1h-1z"
-     fill="rgb(130,19,190)"
-     id="path19213" />
+     fill="rgb(129,0,194)"
+     id="path32973" />
   <path
      d="M10 0h1v1h-1z"
-     fill="rgb(131,20,191)"
-     id="path19215" />
+     fill="rgb(130,0,195)"
+     id="path32975" />
   <path
      d="M11 0h1v1h-1z"
-     fill="rgb(152,46,208)"
-     id="path19217" />
+     fill="rgb(151,34,212)"
+     id="path32977" />
   <path
      d="M12 0h1v1h-1z"
-     fill="rgb(210,152,240)"
-     id="path19219" />
-  <path
-     d="M13 0h1v1h-1z"
-     fill="rgb(239,222,249)"
-     id="path19221" />
+     fill="rgb(140,0,204)"
+     id="path32979" />
   <path
      d="M2 1h1v1h-1z"
-     fill="rgb(184,94,232)"
-     id="path19231" />
+     fill="rgb(141,29,201)"
+     id="path32983" />
   <path
      d="M3 1h1v1h-1z"
-     fill="rgb(132,18,191)"
-     id="path19233" />
+     fill="rgb(109,0,163)"
+     id="path32985" />
   <path
      d="M4 1h1v1h-1z"
-     fill="rgb(114,20,163)"
-     id="path19235" />
+     fill="rgb(113,2,166)"
+     id="path32987" />
   <path
      d="M5 1h1v1h-1z"
-     fill="rgb(126,25,181)"
-     id="path19237" />
+     fill="rgb(126,4,185)"
+     id="path32989" />
   <path
      d="M6 1h1v1h-1z"
-     fill="rgb(124,28,167)"
-     id="path19239" />
+     fill="rgb(123,16,170)"
+     id="path32991" />
   <path
      d="M7 1h1v1h-1z"
-     fill="rgb(127,30,167)"
-     id="path19241" />
+     fill="rgb(126,19,170)"
+     id="path32993" />
   <path
      d="M8 1h1v1h-1z"
-     fill="rgb(137,37,170)"
-     id="path19243" />
+     fill="rgb(136,29,173)"
+     id="path32995" />
   <path
      d="M9 1h1v1h-1z"
-     fill="rgb(139,40,175)"
-     id="path19245" />
+     fill="rgb(138,31,178)"
+     id="path32997" />
   <path
      d="M10 1h1v1h-1z"
-     fill="rgb(135,19,190)"
-     id="path19247" />
+     fill="rgb(134,0,194)"
+     id="path32999" />
   <path
      d="M11 1h1v1h-1z"
-     fill="rgb(119,19,170)"
-     id="path19249" />
+     fill="rgb(118,0,173)"
+     id="path33001" />
   <path
      d="M12 1h1v1h-1z"
-     fill="rgb(115,21,164)"
-     id="path19251" />
+     fill="rgb(106,6,154)"
+     id="path33003" />
   <path
      d="M13 1h1v1h-1z"
-     fill="rgb(147,24,208)"
-     id="path19253" />
-  <path
-     d="M14 1h1v1h-1z"
-     fill="rgb(213,156,241)"
-     id="path19255" />
+     fill="rgb(131,0,191)"
+     id="path33005" />
   <path
      d="M1 2h1v1h-1z"
-     fill="rgb(194,120,235)"
-     id="path19261" />
+     fill="rgb(155,49,218)"
+     id="path33007" />
   <path
      d="M2 2h1v1h-1z"
-     fill="rgb(132,19,188)"
-     id="path19263" />
+     fill="rgb(110,0,161)"
+     id="path33009" />
   <path
      d="M3 2h1v1h-1z"
-     fill="rgb(114,20,165)"
-     id="path19265" />
+     fill="rgb(113,2,168)"
+     id="path33011" />
   <path
      d="M4 2h1v1h-1z"
-     fill="rgb(196,156,102)"
-     id="path19267" />
+     fill="rgb(194,157,98)"
+     id="path33013" />
   <path
      d="M5 2h1v1h-1z"
-     fill="rgb(218,232,74)"
-     id="path19269" />
+     fill="rgb(218,234,50)"
+     id="path33015" />
   <path
      d="M6 2h1v1h-1z"
-     fill="rgb(220,231,74)"
-     id="path19271" />
+     fill="rgb(220,233,51)"
+     id="path33017" />
   <path
      d="M7 2h1v1h-1z"
-     fill="rgb(128,61,120)"
-     id="path19273" />
+     fill="rgb(126,60,121)"
+     id="path33019" />
   <path
      d="M8 2h1v1h-1z"
-     fill="rgb(122,53,129)"
-     id="path19275" />
+     fill="rgb(121,50,131)"
+     id="path33021" />
   <path
      d="M9 2h1v1h-1z"
-     fill="rgb(215,232,74)"
-     id="path19277" />
+     fill="rgb(215,234,51)"
+     id="path33023" />
   <path
      d="M10 2h1v1h-1z"
-     fill="rgb(218,231,74)"
-     id="path19279" />
+     fill="rgb(218,233,51)"
+     id="path33025" />
   <path
      d="M11 2h1v1h-1z"
-     fill="rgb(194,149,101)"
-     id="path19281" />
+     fill="rgb(192,150,98)"
+     id="path33027" />
   <path
      d="M12 2h1v1h-1z"
-     fill="rgb(154,53,184)"
-     id="path19283" />
+     fill="rgb(152,45,186)"
+     id="path33029" />
   <path
      d="M13 2h1v1h-1z"
-     fill="rgb(116,20,166)"
-     id="path19285" />
+     fill="rgb(103,6,150)"
+     id="path33031" />
   <path
      d="M14 2h1v1h-1z"
-     fill="rgb(140,17,208)"
-     id="path19287" />
-  <path
-     d="M15 2h1v1h-1z"
-     fill="rgb(213,156,243)"
-     id="path19289" />
+     fill="rgb(126,0,192)"
+     id="path33033" />
   <path
      d="M0 3h1v1h-1z"
-     fill="rgb(235,209,248)"
-     id="path19291" />
+     fill="rgb(142,8,205)"
+     id="path33035" />
   <path
      d="M1 3h1v1h-1z"
-     fill="rgb(118,20,174)"
-     id="path19293" />
+     fill="rgb(94,6,142)"
+     id="path33037" />
   <path
      d="M2 3h1v1h-1z"
-     fill="rgb(110,22,153)"
-     id="path19295" />
+     fill="rgb(108,10,153)"
+     id="path33039" />
   <path
      d="M3 3h1v1h-1z"
-     fill="rgb(148,86,117)"
-     id="path19297" />
+     fill="rgb(146,86,118)"
+     id="path33041" />
   <path
      d="M4 3h1v1h-1z"
-     fill="rgb(153,110,93)"
-     id="path19299" />
+     fill="rgb(151,110,92)"
+     id="path33043" />
   <path
      d="M5 3h1v1h-1z"
-     fill="rgb(217,232,75)"
-     id="path19301" />
+     fill="rgb(217,235,51)"
+     id="path33045" />
   <path
      d="M6 3h1v1h-1z"
-     fill="rgb(218,230,74)"
-     id="path19303" />
+     fill="rgb(218,232,52)"
+     id="path33047" />
   <path
      d="M7 3h1v1h-1z"
-     fill="rgb(131,61,125)"
-     id="path19305" />
+     fill="rgb(129,60,127)"
+     id="path33049" />
   <path
      d="M8 3h1v1h-1z"
-     fill="rgb(109,25,145)"
-     id="path19307" />
+     fill="rgb(108,15,148)"
+     id="path33051" />
   <path
      d="M9 3h1v1h-1z"
-     fill="rgb(218,230,74)"
-     id="path19309" />
+     fill="rgb(218,232,52)"
+     id="path33053" />
   <path
      d="M10 3h1v1h-1z"
-     fill="rgb(218,232,74)"
-     id="path19311" />
+     fill="rgb(218,233,50)"
+     id="path33055" />
   <path
      d="M11 3h1v1h-1z"
-     fill="rgb(204,208,71)"
-     id="path19313" />
+     fill="rgb(203,210,52)"
+     id="path33057" />
   <path
      d="M12 3h1v1h-1z"
-     fill="rgb(190,173,73)"
-     id="path19315" />
+     fill="rgb(188,174,62)"
+     id="path33059" />
   <path
      d="M13 3h1v1h-1z"
-     fill="rgb(148,51,181)"
-     id="path19317" />
+     fill="rgb(147,46,182)"
+     id="path33061" />
   <path
      d="M14 3h1v1h-1z"
-     fill="rgb(116,21,168)"
-     id="path19319" />
+     fill="rgb(110,3,164)"
+     id="path33063" />
   <path
      d="M15 3h1v1h-1z"
-     fill="rgb(162,37,226)"
-     id="path19321" />
+     fill="rgb(153,8,219)"
+     id="path33065" />
   <path
      d="M0 4h1v1h-1z"
-     fill="rgb(154,48,211)"
-     id="path19323" />
+     fill="rgb(139,28,199)"
+     id="path33067" />
   <path
      d="M1 4h1v1h-1z"
-     fill="rgb(107,22,152)"
-     id="path19325" />
+     fill="rgb(104,9,151)"
+     id="path33069" />
   <path
      d="M2 4h1v1h-1z"
-     fill="rgb(153,83,134)"
-     id="path19327" />
+     fill="rgb(151,82,135)"
+     id="path33071" />
   <path
      d="M3 4h1v1h-1z"
-     fill="rgb(148,100,101)"
-     id="path19329" />
+     fill="rgb(146,100,101)"
+     id="path33073" />
   <path
      d="M4 4h1v1h-1z"
-     fill="rgb(107,22,146)"
-     id="path19331" />
+     fill="rgb(106,10,149)"
+     id="path33075" />
   <path
      d="M5 4h1v1h-1z"
-     fill="rgb(200,191,78)"
-     id="path19333" />
+     fill="rgb(199,193,66)"
+     id="path33077" />
   <path
      d="M6 4h1v1h-1z"
-     fill="rgb(135,47,127)"
-     id="path19335" />
+     fill="rgb(133,44,129)"
+     id="path33079" />
   <path
      d="M7 4h1v1h-1z"
-     fill="rgb(122,18,141)"
-     id="path19337" />
+     fill="rgb(120,6,143)"
+     id="path33081" />
   <path
      d="M8 4h1v1h-1z"
-     fill="rgb(123,17,145)"
-     id="path19339" />
+     fill="rgb(121,2,148)"
+     id="path33083" />
   <path
      d="M9 4h1v1h-1z"
-     fill="rgb(134,42,131)"
-     id="path19341" />
+     fill="rgb(133,38,133)"
+     id="path33085" />
   <path
      d="M10 4h1v1h-1z"
-     fill="rgb(183,152,89)"
-     id="path19343" />
+     fill="rgb(182,153,84)"
+     id="path33087" />
   <path
      d="M11 4h1v1h-1z"
-     fill="rgb(129,61,124)"
-     id="path19345" />
+     fill="rgb(127,60,126)"
+     id="path33089" />
   <path
      d="M12 4h1v1h-1z"
-     fill="rgb(105,22,151)"
-     id="path19347" />
+     fill="rgb(104,8,154)"
+     id="path33091" />
   <path
      d="M13 4h1v1h-1z"
-     fill="rgb(214,225,73)"
-     id="path19349" />
+     fill="rgb(214,227,52)"
+     id="path33093" />
   <path
      d="M14 4h1v1h-1z"
-     fill="rgb(115,21,164)"
-     id="path19351" />
+     fill="rgb(114,4,167)"
+     id="path33095" />
   <path
      d="M15 4h1v1h-1z"
-     fill="rgb(137,22,196)"
-     id="path19353" />
+     fill="rgb(135,0,198)"
+     id="path33097" />
   <path
      d="M0 5h1v1h-1z"
-     fill="rgb(120,23,173)"
-     id="path19355" />
+     fill="rgb(96,8,141)"
+     id="path33099" />
   <path
      d="M1 5h1v1h-1z"
-     fill="rgb(112,22,156)"
-     id="path19357" />
+     fill="rgb(111,7,159)"
+     id="path33101" />
   <path
      d="M2 5h1v1h-1z"
-     fill="rgb(198,173,84)"
-     id="path19359" />
+     fill="rgb(196,174,75)"
+     id="path33103" />
   <path
      d="M3 5h1v1h-1z"
-     fill="rgb(219,232,74)"
-     id="path19361" />
+     fill="rgb(218,233,50)"
+     id="path33105" />
   <path
      d="M4 5h1v1h-1z"
-     fill="rgb(197,178,76)"
-     id="path19363" />
+     fill="rgb(195,179,65)"
+     id="path33107" />
   <path
      d="M5 5h1v1h-1z"
-     fill="rgb(124,19,141)"
-     id="path19365" />
+     fill="rgb(122,6,144)"
+     id="path33109" />
   <path
      d="M6 5h1v1h-1z"
-     fill="rgb(114,7,151)"
-     id="path19367" />
+     fill="rgb(113,0,154)"
+     id="path33111" />
   <path
      d="M7 5h1v1h-1z"
-     fill="rgb(114,14,147)"
-     id="path19369" />
+     fill="rgb(113,0,149)"
+     id="path33113" />
   <path
      d="M8 5h1v1h-1z"
-     fill="rgb(113,13,146)"
-     id="path19371" />
+     fill="rgb(112,0,148)"
+     id="path33115" />
   <path
      d="M9 5h1v1h-1z"
-     fill="rgb(117,7,152)"
-     id="path19373" />
+     fill="rgb(116,0,155)"
+     id="path33117" />
   <path
      d="M10 5h1v1h-1z"
-     fill="rgb(125,20,142)"
-     id="path19375" />
+     fill="rgb(123,7,145)"
+     id="path33119" />
   <path
      d="M11 5h1v1h-1z"
-     fill="rgb(191,161,75)"
-     id="path19377" />
+     fill="rgb(189,162,66)"
+     id="path33121" />
   <path
      d="M12 5h1v1h-1z"
-     fill="rgb(214,218,72)"
-     id="path19379" />
+     fill="rgb(213,220,51)"
+     id="path33123" />
   <path
      d="M13 5h1v1h-1z"
-     fill="rgb(216,233,75)"
-     id="path19381" />
+     fill="rgb(216,235,51)"
+     id="path33125" />
   <path
      d="M14 5h1v1h-1z"
-     fill="rgb(151,37,189)"
-     id="path19383" />
+     fill="rgb(150,25,193)"
+     id="path33127" />
   <path
      d="M15 5h1v1h-1z"
-     fill="rgb(122,20,173)"
-     id="path19385" />
+     fill="rgb(121,0,176)"
+     id="path33129" />
   <path
      d="M0 6h1v1h-1z"
-     fill="rgb(111,24,153)"
-     id="path19387" />
+     fill="rgb(94,14,132)"
+     id="path33131" />
   <path
      d="M1 6h1v1h-1z"
-     fill="rgb(122,28,166)"
-     id="path19389" />
+     fill="rgb(121,16,169)"
+     id="path33133" />
   <path
      d="M2 6h1v1h-1z"
-     fill="rgb(216,228,73)"
-     id="path19391" />
+     fill="rgb(216,230,51)"
+     id="path33135" />
   <path
      d="M3 6h1v1h-1z"
-     fill="rgb(216,230,75)"
-     id="path19393" />
+     fill="rgb(216,232,53)"
+     id="path33137" />
   <path
      d="M4 6h1v1h-1z"
-     fill="rgb(131,38,131)"
-     id="path19395" />
+     fill="rgb(130,34,133)"
+     id="path33139" />
   <path
      d="M5 6h1v1h-1z"
-     fill="rgb(115,8,150)"
-     id="path19397" />
+     fill="rgb(114,0,153)"
+     id="path33141" />
   <path
      d="M6 6h1v1h-1z"
-     fill="rgb(106,44,128)"
-     id="path19399" />
+     fill="rgb(105,41,130)"
+     id="path33143" />
   <path
      d="M7 6h1v1h-1z"
-     fill="rgb(79,113,92)"
-     id="path19401" />
+     fill="rgb(81,114,91)"
+     id="path33145" />
   <path
      d="M8 6h1v1h-1z"
-     fill="rgb(77,115,89)"
-     id="path19403" />
+     fill="rgb(79,116,88)"
+     id="path33147" />
   <path
      d="M9 6h1v1h-1z"
-     fill="rgb(103,40,130)"
-     id="path19405" />
+     fill="rgb(101,37,133)"
+     id="path33149" />
   <path
      d="M10 6h1v1h-1z"
-     fill="rgb(117,6,150)"
-     id="path19407" />
+     fill="rgb(116,0,153)"
+     id="path33151" />
   <path
      d="M11 6h1v1h-1z"
-     fill="rgb(151,79,107)"
-     id="path19409" />
+     fill="rgb(149,78,108)"
+     id="path33153" />
   <path
      d="M12 6h1v1h-1z"
-     fill="rgb(215,229,74)"
-     id="path19411" />
+     fill="rgb(215,231,52)"
+     id="path33155" />
   <path
      d="M13 6h1v1h-1z"
-     fill="rgb(217,231,73)"
-     id="path19413" />
+     fill="rgb(217,233,49)"
+     id="path33157" />
   <path
      d="M14 6h1v1h-1z"
-     fill="rgb(175,94,152)"
-     id="path19415" />
+     fill="rgb(173,93,151)"
+     id="path33159" />
   <path
      d="M15 6h1v1h-1z"
-     fill="rgb(117,19,171)"
-     id="path19417" />
+     fill="rgb(116,0,174)"
+     id="path33161" />
   <path
      d="M0 7h1v1h-1z"
-     fill="rgb(107,22,152)"
-     id="path19419" />
+     fill="rgb(106,8,155)"
+     id="path33163" />
   <path
      d="M1 7h1v1h-1z"
-     fill="rgb(134,26,178)"
-     id="path19421" />
+     fill="rgb(133,9,182)"
+     id="path33165" />
   <path
      d="M2 7h1v1h-1z"
-     fill="rgb(118,39,138)"
-     id="path19423" />
+     fill="rgb(117,34,141)"
+     id="path33167" />
   <path
      d="M3 7h1v1h-1z"
-     fill="rgb(144,91,108)"
-     id="path19425" />
+     fill="rgb(143,91,108)"
+     id="path33169" />
   <path
      d="M4 7h1v1h-1z"
-     fill="rgb(119,9,150)"
-     id="path19427" />
+     fill="rgb(118,0,153)"
+     id="path33171" />
   <path
      d="M5 7h1v1h-1z"
-     fill="rgb(112,12,146)"
-     id="path19429" />
+     fill="rgb(111,0,149)"
+     id="path33173" />
   <path
      d="M6 7h1v1h-1z"
-     fill="rgb(78,112,91)"
-     id="path19431" />
+     fill="rgb(80,113,90)"
+     id="path33175" />
   <path
      d="M7 7h1v1h-1z"
-     fill="rgb(22,180,67)"
-     id="path19433" />
+     fill="rgb(42,182,56)"
+     id="path33177" />
   <path
      d="M8 7h1v1h-1z"
-     fill="rgb(10,184,67)"
-     id="path19435" />
+     fill="rgb(37,186,55)"
+     id="path33179" />
   <path
      d="M9 7h1v1h-1z"
-     fill="rgb(77,114,92)"
-     id="path19437" />
+     fill="rgb(79,115,91)"
+     id="path33181" />
   <path
      d="M10 7h1v1h-1z"
-     fill="rgb(114,10,146)"
-     id="path19439" />
+     fill="rgb(113,0,149)"
+     id="path33183" />
   <path
      d="M11 7h1v1h-1z"
-     fill="rgb(134,46,128)"
-     id="path19441" />
+     fill="rgb(132,43,130)"
+     id="path33185" />
   <path
      d="M12 7h1v1h-1z"
-     fill="rgb(112,28,146)"
-     id="path19443" />
+     fill="rgb(111,19,149)"
+     id="path33187" />
   <path
      d="M13 7h1v1h-1z"
-     fill="rgb(116,37,136)"
-     id="path19445" />
+     fill="rgb(115,32,139)"
+     id="path33189" />
   <path
      d="M14 7h1v1h-1z"
-     fill="rgb(186,128,118)"
-     id="path19447" />
+     fill="rgb(184,128,116)"
+     id="path33191" />
   <path
-     d="M15 7h1v1h-1z"
-     fill="rgb(120,19,175)"
-     id="path19449" />
+     d="M15 7h1v2h-1z"
+     fill="rgb(120,0,179)"
+     id="path33193" />
   <path
      d="M0 8h1v1h-1z"
-     fill="rgb(121,22,181)"
-     id="path19451" />
+     fill="rgb(121,0,185)"
+     id="path33195" />
   <path
      d="M1 8h1v1h-1z"
-     fill="rgb(126,26,164)"
-     id="path19453" />
+     fill="rgb(125,13,167)"
+     id="path33197" />
   <path
      d="M2 8h1v1h-1z"
-     fill="rgb(114,31,141)"
-     id="path19455" />
+     fill="rgb(112,25,144)"
+     id="path33199" />
   <path
      d="M3 8h1v1h-1z"
-     fill="rgb(117,46,134)"
-     id="path19457" />
+     fill="rgb(116,42,137)"
+     id="path33201" />
   <path
      d="M4 8h1v1h-1z"
-     fill="rgb(117,5,153)"
-     id="path19459" />
+     fill="rgb(116,0,156)"
+     id="path33203" />
   <path
      d="M5 8h1v1h-1z"
-     fill="rgb(113,13,147)"
-     id="path19461" />
+     fill="rgb(112,0,150)"
+     id="path33205" />
   <path
      d="M6 8h1v1h-1z"
-     fill="rgb(73,118,91)"
-     id="path19463" />
+     fill="rgb(75,119,89)"
+     id="path33207" />
   <path
      d="M7 8h1v1h-1z"
-     fill="rgb(4,187,66)"
-     id="path19465" />
+     fill="rgb(36,189,54)"
+     id="path33209" />
   <path
      d="M8 8h1v1h-1z"
-     fill="rgb(0,190,66)"
-     id="path19467" />
+     fill="rgb(34,192,53)"
+     id="path33211" />
   <path
      d="M9 8h1v1h-1z"
-     fill="rgb(71,121,88)"
-     id="path19469" />
+     fill="rgb(74,122,87)"
+     id="path33213" />
   <path
      d="M10 8h1v1h-1z"
-     fill="rgb(115,10,147)"
-     id="path19471" />
+     fill="rgb(114,0,149)"
+     id="path33215" />
   <path
      d="M11 8h1v1h-1z"
-     fill="rgb(127,36,132)"
-     id="path19473" />
+     fill="rgb(126,32,135)"
+     id="path33217" />
   <path
      d="M12 8h1v1h-1z"
-     fill="rgb(112,31,142)"
-     id="path19475" />
+     fill="rgb(110,23,145)"
+     id="path33219" />
   <path
      d="M13 8h1v1h-1z"
-     fill="rgb(130,63,122)"
-     id="path19477" />
+     fill="rgb(128,62,123)"
+     id="path33221" />
   <path
      d="M14 8h1v1h-1z"
-     fill="rgb(198,157,98)"
-     id="path19479" />
-  <path
-     d="M15 8h1v1h-1z"
-     fill="rgb(121,18,175)"
-     id="path19481" />
+     fill="rgb(196,158,93)"
+     id="path33223" />
   <path
      d="M0 9h1v1h-1z"
-     fill="rgb(110,21,151)"
-     id="path19483" />
+     fill="rgb(109,6,154)"
+     id="path33225" />
   <path
      d="M1 9h1v1h-1z"
-     fill="rgb(115,27,160)"
-     id="path19485" />
+     fill="rgb(114,15,163)"
+     id="path33227" />
   <path
      d="M2 9h1v1h-1z"
-     fill="rgb(216,229,73)"
-     id="path19487" />
+     fill="rgb(216,231,50)"
+     id="path33229" />
   <path
      d="M3 9h1v1h-1z"
-     fill="rgb(216,231,74)"
-     id="path19489" />
+     fill="rgb(216,233,51)"
+     id="path33231" />
   <path
      d="M4 9h1v1h-1z"
-     fill="rgb(129,33,142)"
-     id="path19491" />
+     fill="rgb(127,26,145)"
+     id="path33233" />
   <path
      d="M5 9h1v1h-1z"
-     fill="rgb(114,6,147)"
-     id="path19493" />
+     fill="rgb(113,0,150)"
+     id="path33235" />
   <path
      d="M6 9h1v1h-1z"
-     fill="rgb(104,41,131)"
-     id="path19495" />
+     fill="rgb(103,37,134)"
+     id="path33237" />
   <path
      d="M7 9h1v1h-1z"
-     fill="rgb(75,117,86)"
-     id="path19497" />
+     fill="rgb(77,118,85)"
+     id="path33239" />
   <path
      d="M8 9h1v1h-1z"
-     fill="rgb(71,121,88)"
-     id="path19499" />
+     fill="rgb(74,122,87)"
+     id="path33241" />
   <path
      d="M9 9h1v1h-1z"
-     fill="rgb(103,42,131)"
-     id="path19501" />
+     fill="rgb(102,39,134)"
+     id="path33243" />
   <path
      d="M10 9h1v1h-1z"
-     fill="rgb(116,4,148)"
-     id="path19503" />
+     fill="rgb(115,0,151)"
+     id="path33245" />
   <path
      d="M11 9h1v1h-1z"
-     fill="rgb(147,63,119)"
-     id="path19505" />
+     fill="rgb(145,61,120)"
+     id="path33247" />
   <path
      d="M12 9h1v1h-1z"
-     fill="rgb(216,226,75)"
-     id="path19507" />
+     fill="rgb(216,228,53)"
+     id="path33249" />
   <path
      d="M13 9h1v1h-1z"
-     fill="rgb(219,232,75)"
-     id="path19509" />
+     fill="rgb(219,234,52)"
+     id="path33251" />
   <path
      d="M14 9h1v1h-1z"
-     fill="rgb(194,153,102)"
-     id="path19511" />
+     fill="rgb(192,154,98)"
+     id="path33253" />
   <path
      d="M15 9h1v1h-1z"
-     fill="rgb(119,21,173)"
-     id="path19513" />
+     fill="rgb(118,0,176)"
+     id="path33255" />
   <path
      d="M0 10h1v1h-1z"
-     fill="rgb(121,20,178)"
-     id="path19515" />
+     fill="rgb(121,0,182)"
+     id="path33257" />
   <path
      d="M1 10h1v1h-1z"
-     fill="rgb(107,24,153)"
-     id="path19517" />
+     fill="rgb(106,11,156)"
+     id="path33259" />
   <path
      d="M2 10h1v1h-1z"
-     fill="rgb(184,137,103)"
-     id="path19519" />
+     fill="rgb(182,138,101)"
+     id="path33261" />
   <path
      d="M3 10h1v1h-1z"
-     fill="rgb(219,232,74)"
-     id="path19521" />
+     fill="rgb(219,234,51)"
+     id="path33263" />
   <path
      d="M4 10h1v1h-1z"
-     fill="rgb(207,205,73)"
-     id="path19523" />
+     fill="rgb(206,207,55)"
+     id="path33265" />
   <path
      d="M5 10h1v1h-1z"
-     fill="rgb(126,17,144)"
-     id="path19525" />
+     fill="rgb(124,2,147)"
+     id="path33267" />
   <path
      d="M6 10h1v1h-1z"
-     fill="rgb(114,9,148)"
-     id="path19527" />
+     fill="rgb(113,0,151)"
+     id="path33269" />
   <path
      d="M7 10h1v1h-1z"
-     fill="rgb(116,12,149)"
-     id="path19529" />
+     fill="rgb(115,0,152)"
+     id="path33271" />
   <path
      d="M8 10h1v1h-1z"
-     fill="rgb(115,12,148)"
-     id="path19531" />
+     fill="rgb(114,0,151)"
+     id="path33273" />
   <path
      d="M9 10h1v1h-1z"
-     fill="rgb(114,9,150)"
-     id="path19533" />
+     fill="rgb(113,0,153)"
+     id="path33275" />
   <path
      d="M10 10h1v1h-1z"
-     fill="rgb(131,30,135)"
-     id="path19535" />
+     fill="rgb(130,24,138)"
+     id="path33277" />
   <path
      d="M11 10h1v1h-1z"
-     fill="rgb(193,177,73)"
-     id="path19537" />
+     fill="rgb(191,178,62)"
+     id="path33279" />
   <path
      d="M12 10h1v1h-1z"
-     fill="rgb(217,233,74)"
-     id="path19539" />
+     fill="rgb(217,235,51)"
+     id="path33281" />
   <path
      d="M13 10h1v1h-1z"
-     fill="rgb(216,232,74)"
-     id="path19541" />
+     fill="rgb(216,234,50)"
+     id="path33283" />
   <path
      d="M14 10h1v1h-1z"
-     fill="rgb(160,78,162)"
-     id="path19543" />
+     fill="rgb(159,75,165)"
+     id="path33285" />
   <path
      d="M15 10h1v1h-1z"
-     fill="rgb(121,18,177)"
-     id="path19545" />
+     fill="rgb(121,0,181)"
+     id="path33287" />
   <path
      d="M0 11h1v1h-1z"
-     fill="rgb(169,53,229)"
-     id="path19547" />
+     fill="rgb(168,39,233)"
+     id="path33289" />
   <path
      d="M1 11h1v1h-1z"
-     fill="rgb(115,19,163)"
-     id="path19549" />
+     fill="rgb(114,1,166)"
+     id="path33291" />
   <path
      d="M2 11h1v1h-1z"
-     fill="rgb(125,22,177)"
-     id="path19551" />
+     fill="rgb(124,0,181)"
+     id="path33293" />
   <path
      d="M3 11h1v1h-1z"
-     fill="rgb(184,162,73)"
-     id="path19553" />
+     fill="rgb(182,163,64)"
+     id="path33295" />
   <path
      d="M4 11h1v1h-1z"
-     fill="rgb(106,23,151)"
-     id="path19555" />
+     fill="rgb(105,10,154)"
+     id="path33297" />
   <path
      d="M5 11h1v1h-1z"
-     fill="rgb(200,190,73)"
-     id="path19557" />
+     fill="rgb(198,191,58)"
+     id="path33299" />
   <path
      d="M6 11h1v1h-1z"
-     fill="rgb(161,106,93)"
-     id="path19559" />
+     fill="rgb(159,106,92)"
+     id="path33301" />
   <path
      d="M7 11h1v1h-1z"
-     fill="rgb(140,55,119)"
-     id="path19561" />
+     fill="rgb(138,53,120)"
+     id="path33303" />
   <path
      d="M8 11h1v1h-1z"
-     fill="rgb(138,47,122)"
-     id="path19563" />
+     fill="rgb(136,44,124)"
+     id="path33305" />
   <path
      d="M9 11h1v1h-1z"
-     fill="rgb(154,90,104)"
-     id="path19565" />
+     fill="rgb(152,90,104)"
+     id="path33307" />
   <path
      d="M10 11h1v1h-1z"
-     fill="rgb(205,201,70)"
-     id="path19567" />
+     fill="rgb(204,203,53)"
+     id="path33309" />
   <path
      d="M11 11h1v1h-1z"
-     fill="rgb(109,22,146)"
-     id="path19569" />
+     fill="rgb(108,10,149)"
+     id="path33311" />
   <path
      d="M12 11h1v1h-1z"
-     fill="rgb(140,82,108)"
-     id="path19571" />
+     fill="rgb(139,82,111)"
+     id="path33313" />
   <path
      d="M13 11h1v1h-1z"
-     fill="rgb(210,191,86)"
-     id="path19573" />
+     fill="rgb(208,192,76)"
+     id="path33315" />
   <path
      d="M14 11h1v1h-1z"
-     fill="rgb(147,17,222)"
-     id="path19575" />
+     fill="rgb(146,0,226)"
+     id="path33317" />
   <path
      d="M15 11h1v1h-1z"
-     fill="rgb(146,18,216)"
-     id="path19577" />
+     fill="rgb(142,0,216)"
+     id="path33319" />
   <path
      d="M0 12h1v1h-1z"
-     fill="rgb(240,219,252)"
-     id="path19579" />
+     fill="rgb(176,71,236)"
+     id="path33321" />
   <path
      d="M1 12h1v1h-1z"
-     fill="rgb(149,18,222)"
-     id="path19581" />
+     fill="rgb(138,0,211)"
+     id="path33323" />
   <path
      d="M2 12h1v1h-1z"
-     fill="rgb(117,19,171)"
-     id="path19583" />
+     fill="rgb(115,0,173)"
+     id="path33325" />
   <path
      d="M3 12h1v1h-1z"
-     fill="rgb(144,68,136)"
-     id="path19585" />
+     fill="rgb(142,66,138)"
+     id="path33327" />
   <path
      d="M4 12h1v1h-1z"
-     fill="rgb(168,136,81)"
-     id="path19587" />
+     fill="rgb(167,137,77)"
+     id="path33329" />
   <path
      d="M5 12h1v1h-1z"
-     fill="rgb(214,230,73)"
-     id="path19589" />
+     fill="rgb(214,232,50)"
+     id="path33331" />
   <path
      d="M6 12h1v1h-1z"
-     fill="rgb(219,230,74)"
-     id="path19591" />
+     fill="rgb(219,232,51)"
+     id="path33333" />
   <path
      d="M7 12h1v1h-1z"
-     fill="rgb(119,48,133)"
-     id="path19593" />
+     fill="rgb(118,45,135)"
+     id="path33335" />
   <path
      d="M8 12h1v1h-1z"
-     fill="rgb(119,46,134)"
-     id="path19595" />
+     fill="rgb(118,42,136)"
+     id="path33337" />
   <path
      d="M9 12h1v1h-1z"
-     fill="rgb(221,233,75)"
-     id="path19597" />
+     fill="rgb(221,235,51)"
+     id="path33339" />
   <path
      d="M10 12h1v1h-1z"
-     fill="rgb(217,233,75)"
-     id="path19599" />
+     fill="rgb(217,234,52)"
+     id="path33341" />
   <path
      d="M11 12h1v1h-1z"
-     fill="rgb(173,144,81)"
-     id="path19601" />
+     fill="rgb(172,145,75)"
+     id="path33343" />
   <path
      d="M12 12h1v1h-1z"
-     fill="rgb(177,124,108)"
-     id="path19603" />
+     fill="rgb(175,124,107)"
+     id="path33345" />
   <path
      d="M13 12h1v1h-1z"
-     fill="rgb(140,20,203)"
-     id="path19605" />
+     fill="rgb(139,0,207)"
+     id="path33347" />
   <path
      d="M14 12h1v1h-1z"
-     fill="rgb(133,17,193)"
-     id="path19607" />
+     fill="rgb(112,0,165)"
+     id="path33349" />
   <path
      d="M15 12h1v1h-1z"
-     fill="rgb(207,143,241)"
-     id="path19609" />
+     fill="rgb(154,36,220)"
+     id="path33351" />
   <path
      d="M1 13h1v1h-1z"
-     fill="rgb(198,119,236)"
-     id="path19613" />
+     fill="rgb(151,35,212)"
+     id="path33355" />
   <path
      d="M2 13h1v1h-1z"
-     fill="rgb(130,18,193)"
-     id="path19615" />
+     fill="rgb(114,0,173)"
+     id="path33357" />
   <path
      d="M3 13h1v1h-1z"
-     fill="rgb(106,21,151)"
-     id="path19617" />
+     fill="rgb(105,7,153)"
+     id="path33359" />
   <path
      d="M4 13h1v1h-1z"
-     fill="rgb(128,27,172)"
-     id="path19619" />
+     fill="rgb(127,13,175)"
+     id="path33361" />
   <path
      d="M5 13h1v1h-1z"
-     fill="rgb(209,191,76)"
-     id="path19621" />
+     fill="rgb(207,192,63)"
+     id="path33363" />
   <path
      d="M6 13h1v1h-1z"
-     fill="rgb(218,223,72)"
-     id="path19623" />
+     fill="rgb(217,225,50)"
+     id="path33365" />
   <path
      d="M7 13h1v1h-1z"
-     fill="rgb(120,49,134)"
-     id="path19625" />
+     fill="rgb(119,46,136)"
+     id="path33367" />
   <path
      d="M8 13h1v1h-1z"
-     fill="rgb(120,50,131)"
-     id="path19627" />
+     fill="rgb(119,47,133)"
+     id="path33369" />
   <path
      d="M9 13h1v1h-1z"
-     fill="rgb(218,231,74)"
-     id="path19629" />
+     fill="rgb(218,233,51)"
+     id="path33371" />
   <path
      d="M10 13h1v1h-1z"
-     fill="rgb(214,223,73)"
-     id="path19631" />
+     fill="rgb(214,225,51)"
+     id="path33373" />
   <path
      d="M11 13h1v1h-1z"
-     fill="rgb(170,90,157)"
-     id="path19633" />
+     fill="rgb(168,89,159)"
+     id="path33375" />
   <path
      d="M12 13h1v1h-1z"
-     fill="rgb(117,19,171)"
-     id="path19635" />
+     fill="rgb(116,0,174)"
+     id="path33377" />
   <path
      d="M13 13h1v1h-1z"
-     fill="rgb(117,20,170)"
-     id="path19637" />
+     fill="rgb(104,4,154)"
+     id="path33379" />
   <path
      d="M14 13h1v1h-1z"
-     fill="rgb(141,29,199)"
-     id="path19639" />
-  <path
-     d="M15 13h1v1h-1z"
-     fill="rgb(248,238,254)"
-     id="path19641" />
+     fill="rgb(100,13,144)"
+     id="path33381" />
   <path
      d="M2 14h1v1h-1z"
-     fill="rgb(212,144,240)"
-     id="path19647" />
+     fill="rgb(155,31,212)"
+     id="path33385" />
   <path
      d="M3 14h1v1h-1z"
-     fill="rgb(129,19,186)"
-     id="path19649" />
+     fill="rgb(115,0,173)"
+     id="path33387" />
   <path
      d="M4 14h1v1h-1z"
-     fill="rgb(106,21,150)"
-     id="path19651" />
+     fill="rgb(105,7,153)"
+     id="path33389" />
   <path
      d="M5 14h1v1h-1z"
-     fill="rgb(110,21,152)"
-     id="path19653" />
+     fill="rgb(109,6,155)"
+     id="path33391" />
   <path
      d="M6 14h1v1h-1z"
-     fill="rgb(126,20,181)"
-     id="path19655" />
+     fill="rgb(126,0,185)"
+     id="path33393" />
   <path
      d="M7 14h1v1h-1z"
-     fill="rgb(119,22,166)"
-     id="path19657" />
+     fill="rgb(118,4,169)"
+     id="path33395" />
   <path
      d="M8 14h1v1h-1z"
-     fill="rgb(137,25,189)"
-     id="path19659" />
+     fill="rgb(136,3,195)"
+     id="path33397" />
   <path
      d="M9 14h1v1h-1z"
-     fill="rgb(139,20,199)"
-     id="path19661" />
+     fill="rgb(138,0,203)"
+     id="path33399" />
   <path
      d="M10 14h1v1h-1z"
-     fill="rgb(133,17,195)"
-     id="path19663" />
+     fill="rgb(132,0,199)"
+     id="path33401" />
   <path
      d="M11 14h1v1h-1z"
-     fill="rgb(112,21,163)"
-     id="path19665" />
+     fill="rgb(102,7,151)"
+     id="path33403" />
   <path
      d="M12 14h1v1h-1z"
-     fill="rgb(137,22,200)"
-     id="path19667" />
+     fill="rgb(131,0,198)"
+     id="path33405" />
   <path
      d="M13 14h1v1h-1z"
-     fill="rgb(171,59,229)"
-     id="path19669" />
-  <path
-     d="M14 14h1v1h-1z"
-     fill="rgb(232,208,251)"
-     id="path19671" />
+     fill="rgb(155,26,217)"
+     id="path33407" />
   <path
      d="M3 15h1v1h-1z"
-     fill="rgb(245,230,251)"
-     id="path19679" />
+     fill="rgb(146,24,217)"
+     id="path33409" />
   <path
      d="M4 15h1v1h-1z"
-     fill="rgb(170,61,223)"
-     id="path19681" />
+     fill="rgb(150,33,209)"
+     id="path33411" />
   <path
      d="M5 15h1v1h-1z"
-     fill="rgb(124,23,179)"
-     id="path19683" />
+     fill="rgb(110,6,162)"
+     id="path33413" />
   <path
      d="M6 15h1v1h-1z"
-     fill="rgb(117,20,168)"
-     id="path19685" />
+     fill="rgb(109,2,160)"
+     id="path33415" />
   <path
      d="M7 15h1v1h-1z"
-     fill="rgb(111,21,155)"
-     id="path19687" />
+     fill="rgb(105,7,152)"
+     id="path33417" />
   <path
      d="M8 15h1v1h-1z"
-     fill="rgb(112,23,161)"
-     id="path19689" />
+     fill="rgb(108,9,159)"
+     id="path33419" />
   <path
      d="M9 15h1v1h-1z"
-     fill="rgb(114,20,162)"
-     id="path19691" />
+     fill="rgb(108,4,157)"
+     id="path33421" />
   <path
      d="M10 15h1v1h-1z"
-     fill="rgb(120,26,168)"
-     id="path19693" />
+     fill="rgb(112,12,161)"
+     id="path33423" />
   <path
      d="M11 15h1v1h-1z"
-     fill="rgb(166,63,215)"
-     id="path19695" />
+     fill="rgb(129,31,178)"
+     id="path33425" />
   <path
      d="M12 15h1v1h-1z"
-     fill="rgb(239,222,249)"
-     id="path19697" />
+     fill="rgb(128,0,186)"
+     id="path33427" />
 </svg>
