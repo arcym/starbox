@@ -38,8 +38,8 @@ var ProjectileStore = Reflux.createStore({
         var starships = StarshipStore.getData()
         for(var i in this.data) {
             var projectile = this.data[i]
-            projectile.position.x += projectile.velocity.x * tick
-            projectile.position.y += projectile.velocity.y * tick
+            //projectile.position.x += projectile.velocity.x * tick
+            //projectile.position.y += projectile.velocity.y * tick
             projectile.time += tick
             if(projectile.time > 5) {
                 ProjectileActions.RemoveProjectile(i)
@@ -59,6 +59,7 @@ var ProjectileStore = Reflux.createStore({
                         var x = module.position.x
                         var y = module.position.y
                         var m = Math.sqrt(x * x + y * y)
+                        if(x > 0 || y > 0) {m = -m}
                         x = m * Math.sin(starship.rotation * (Math.PI/180))
                         y = m * Math.cos(starship.rotation * (Math.PI/180)) * -1
                         x += starship.position.x
