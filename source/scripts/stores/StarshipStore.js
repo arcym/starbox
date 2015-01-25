@@ -2,6 +2,7 @@ var LoopActions = require("<scripts>/actions/LoopActions")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 var PlayerStarshipStore = require("<scripts>/stores/PlayerStarshipStore")
 var ProjectileActions = require("<scripts>/actions/ProjectileActions")
+var StarshipModuleStore = require("<scripts>/stores/StarshipModuleStore")
 
 var GalaxyStarshipModules = require("<scripts>/references/starships/GalaxyStarshipModules")
 var ProtoplanetStarshipModules = require("<scripts>/references/starships/ProtoplanetStarshipModules")
@@ -196,9 +197,20 @@ var StarshipStore = Reflux.createStore({
     },
     onDestroyModule: function(jey, key) {
         delete this.data[jey].modules[key]
+        for(var okey in this.data[jey].modules) {
+            if(okey.indexOf(key) == 0) {
+                delete this.data[jey].modules[okey]
+            }
+        }
+
     },
-    onDestroyStarship: function(key) {
-        console.log(key)
+    onDestroyStarship: function(jey) {
+        for(var k in this.data[jey].modules) {
+            var module = this.data[jey].modules[k]
+            var key = jey + "." + k
+            StarshipModuleStore.addModule(key, module)
+        }
+        delete this.data[jey]
     }
 })
 

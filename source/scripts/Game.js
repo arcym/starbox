@@ -6,6 +6,9 @@ var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 var StarshipBlip = require("<scripts>/components/StarshipBlip")
 
+var StarshipModule = require("<scripts>/components/StarshipModule")
+var StarshipModuleStore = require("<scripts>/stores/StarshipModuleStore")
+
 var Projectile = require("<scripts>/components/Projectile")
 var ProjectileStore = require("<scripts>/stores/ProjectileStore")
 
@@ -19,7 +22,8 @@ var Game = React.createClass({
     mixins: [
         Reflux.connect(StarshipStore, "starships"),
         Reflux.connect(StarStore, "stars"),
-        Reflux.connect(ProjectileStore, "projectiles")
+        Reflux.connect(ProjectileStore, "projectiles"),
+        Reflux.connect(StarshipModuleStore, "modules")
     ],
     componentDidMount: function() {
         InputActionStore.addAction("w", StarshipActions.StarshipAccelerate)
