@@ -9,6 +9,7 @@ var gulp_livereload = require("gulp-livereload")
 var gulp_uglify = require("gulp-uglify")
 var gulp_if = require("gulp-if")
 
+var del = require("del")
 var chalk = require("chalk")
 var express = require("express")
 var vinyl_buffer = require("vinyl-buffer")
@@ -90,7 +91,10 @@ gulp.task("default", ["scripts", "styles", "markup", "assets", "configs"]);
 gulp.task("ghpages", function()
 {
     process.env.platform = "ghpages"
-    gulp.start("default")
+    del(["./gulps"], function()
+    {
+        gulp.start("default")
+    })
 })
 
 gulp.task("watch", function()

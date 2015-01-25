@@ -34,9 +34,9 @@ var Game = React.createClass({
                 {this.renderStore(this.state["stars"], Star)}
                 {this.renderStore(this.state["starships"], Starship)}
                 <div className="starmap">
-                    <div className="radar"/>
-                    <div className="circle"/>
-                    <div className="circle"/>
+                    <div className="starmap-radar"/>
+                    <div className="starmap-circle"/>
+                    <div className="starmap-circle"/>
                     {this.renderStore(this.state["starships"], StarshipBlip)}
                 </div>
             </GameFrame>

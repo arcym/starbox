@@ -30,6 +30,7 @@
     "vinyl-source-stream": "~1.0.0"
   },
   "dependencies": {
+    "del": "^1.1.1",
     "express": "^4.11.1",
     "firebase": "^2.1.1",
     "node-uuid": "^1.4.2",

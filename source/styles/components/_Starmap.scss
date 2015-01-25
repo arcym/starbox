@@ -48,8 +48,8 @@ $dark-space-blue: #143753;
 
     .starship-blip
     {
-        width: 1em;
-        height: 1em;
+        width: 1.5em;
+        height: 1.5em;
 
         position: absolute;
 
@@ -70,7 +70,7 @@ $dark-space-blue: #143753;
         }
     }
 
-    .radar
+    .starmap-radar
     {
         top: 0em;
         left: 0em;
@@ -95,7 +95,7 @@ $dark-space-blue: #143753;
         animation-timing-function: linear;
     }
 
-    .circle
+    .starmap-circle
     {
         top: 0em;
         left: 0em;
@@ -107,7 +107,7 @@ $dark-space-blue: #143753;
         opacity: 0.25;
 
         border-width: 0.5em;
-        border-style: solid;
+        border-style: dotted;
         border-radius: 15em;
 
         &:nth-of-type(2) {width: 66%; height: 66%;}
