@@ -22,7 +22,8 @@ var ProjectileStore = Reflux.createStore({
                 x: starship.velocity.x + (10 * Math.sin(starship.rotation * (Math.PI/180))),
                 y: starship.velocity.y - (10 * Math.cos(starship.rotation * (Math.PI/180)))
             },
-            rotation: starship.rotation
+            rotation: starship.rotation,
+            starship: starship
         })
     },
     onTick: function(tick) {
@@ -31,14 +32,18 @@ var ProjectileStore = Reflux.createStore({
             var projectile = this.data[i]
             projectile.position.x += projectile.velocity.x * tick
             projectile.position.y += projectile.velocity.y * tick
-
-            for(var j = 0; j < starships.length; j++) {
+            for(var j in starships) {
                 var starship = starships[j]
-                if(projectile.position.x < starship.position.x + 0.5
-                && projectile.position.x > starship.position.x - 0.5
-                && projectile.position.y < starship.position.y + 0.5
-                && projectile.position.y > starship.position.y + 0.5) {
-                    console.log("HIT")
+                if(starship != projectile.starship) {
+                    var xdist = projectile.position.x - starship.position.x
+                    var ydist = projectile.position.y - starship.position.y
+                    var dist = Math.sqrt(xdist * xdist + ydist * ydist)
+                    if(dist < 0.05 + 0.5) {
+                        console.log("!")
+                    }
+                    /*for(var index = 0; index < starship.modules.length; index++) {
+                        var module = starship.modules[index]
+                    }*/
                 }
             }
         }
