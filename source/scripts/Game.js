@@ -6,6 +6,7 @@ var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 
 var LoopStore = require("<scripts>/stores/LoopStore")
+var MusicStore = require("<scripts>/stores/MusicStore")
 var InputActionStore = require("<scripts>/stores/InputActionStore")
 var KeyboardInputStore = require("<scripts>/stores/KeyboardInputStore")
 var GameFrame = require("<scripts>/components/GameFrame")
@@ -21,9 +22,6 @@ var Game = React.createClass({
         InputActionStore.addAction("a", StarshipActions.StarshipRotateLeft)
         InputActionStore.addAction("d", StarshipActions.StarshipRotateRight)
         InputActionStore.addAction("space bar", StarshipActions.StarshipFireTurrets)
-
-        new Audio("./assets/music/test.mp3").play()
-        console.log("!")
     },
     render: function() {
         return (
