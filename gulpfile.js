@@ -15,6 +15,8 @@ var express = require("express")
 var vinyl_buffer = require("vinyl-buffer")
 var vinyl_source = require("vinyl-source-stream")
 
+var NodeWebkitBuilder = require("node-webkit-builder")
+
 var browserify = require("browserify")
 var reactify = require("reactify")
 var envify = require("envify/custom")
@@ -95,6 +97,27 @@ gulp.task("ghpages", function()
     {
         gulp.start("default")
     })
+})
+
+gulp.task("nwapp", function()
+{
+    var nw = new NodeWebkitBuilder({
+        files: "./builds/nw/**/*",
+        platforms: [
+            "win32", "win64",
+            "osx32", "osx64",
+            "linux32", "linux64"
+        ],
+        buildType: "versioned"
+    })
+    
+    nw.on("log", console.log)
+    
+    nw.build().then(function () {
+        console.log("OK!");
+    }).catch(function (error) {
+        console.error(error);
+    });
 })
 
 gulp.task("watch", function()

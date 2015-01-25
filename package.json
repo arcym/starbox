@@ -34,6 +34,7 @@
     "express": "^4.11.1",
     "firebase": "^2.1.1",
     "node-uuid": "^1.4.2",
+    "node-webkit-builder": "^1.0.7",
     "raf": "^2.0.4",
     "react": "^0.12.2",
     "reflux": "^0.2.3"
