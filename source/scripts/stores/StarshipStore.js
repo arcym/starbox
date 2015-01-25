@@ -319,11 +319,8 @@ var StarshipStore = Reflux.createStore({
                     //var y = module.position.y
                     //x *= Math.sin(this.data[key].rotation * (Math.PI/180))
                     //y *= Math.sin(this.data[key].rotation * (Math.PI/180))
-                    x = this.data[key].position.x
-                    y = this.data[key].position.y
-                    r = this.data[key].rotation
 
-                    ProjectileStore.addProjectile(x, y, r)
+                    ProjectileStore.addProjectile(this.data[key])
                 }
             }
         }

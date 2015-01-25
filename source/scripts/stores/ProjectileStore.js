@@ -6,14 +6,17 @@ var ProjectileStore = Reflux.createStore({
     getData: function() {
         return this.data
     },
-    addProjectile: function(x, y, r) {
-        console.log(x, y, r)
+    addProjectile: function(starship) {
         this.data.push({
             position: {
-                x: x,
-                y: y
+                x: starship.position.x,
+                y: starship.position.y
             },
-            rotation: r
+            velocity: {
+                x: starship.velocity.x + (10 * Math.sin(starship.rotation * (Math.PI/180))),
+                y: starship.velocity.y - (10 * Math.cos(starship.rotation * (Math.PI/180)))
+            },
+            rotation: starship.rotation
         })
     },
     listenables: [
@@ -21,7 +24,8 @@ var ProjectileStore = Reflux.createStore({
     ],
     onTick: function(tick) {
         for(var index = 0; index < this.data.length; index++) {
-            this.data[index].position.x += 0.5 * tick
+            this.data[index].position.x += this.data[index].velocity.x * tick
+            this.data[index].position.y += this.data[index].velocity.y * tick
         }
         this.retrigger()
     }

@@ -11,7 +11,8 @@ var Projectile = React.createClass({
         var player = StarshipStore.getPlayerData()
         return {
             left: this.props.data.position.x - player.position.x + (MAX_WIDTH / 2) + "em",
-            top: this.props.data.position.y - player.position.y + (MAX_HEIGHT / 2) + "em"
+            top: this.props.data.position.y - player.position.y + (MAX_HEIGHT / 2) + "em",
+                transform: "rotate(" + this.props.data.rotation + "deg)"
         }
     },
     renderClasses: function() {
