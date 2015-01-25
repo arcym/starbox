@@ -310,6 +310,19 @@ var StarshipStore = Reflux.createStore({
             this.data[key].velocity.y = maximum_velocity
         }
     },
+    onStarshipDeaccelerate: function(tick) {
+        var key = PlayerStarshipStore.getKey()
+
+        if(this.data[key].velocity.x > 0) {
+            this.data[key].velocity.x -= acceleration * tick
+        } else if(this.data[key].velocity.x < 0) {
+            this.data[key].velocity.x += acceleration * tick
+        } if(this.data[key].velocity.y > 0) {
+            this.data[key].velocity.y -= acceleration * tick
+        } else if(this.data[key].velocity.y < 0) {
+            this.data[key].velocity.y += acceleration * tick
+        }
+    },
     onStarshipRotateLeft: function(tick) {
         var key = PlayerStarshipStore.getKey()
         this.data[key].rotation -= 45*1.5 * tick
