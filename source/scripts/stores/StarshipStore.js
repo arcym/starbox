@@ -45,6 +45,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: -12.5 - 90 - 45,
             affiliation: "rebellion",
+            cooldown: 0,
             damage: 4,
             modules: ProtoplanetStarshipModules("rebellion")
         },
@@ -60,6 +61,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: 0,
             affiliation: "ancient",
+            cooldown: 0,
             damage: 4,
             modules: CometStarshipModules("ancient")
         },
@@ -75,6 +77,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: 45,
             affiliation: "locust",
+            cooldown: 0,
             damage: 4,
             modules: CometStarshipModules("locust")
         }
@@ -160,36 +163,63 @@ var StarshipStore = Reflux.createStore({
         this.data[key].position.y += dy
     },
     onTick: function(tick) {
-        var key = PlayerStarshipStore.getKey()
+        var pkey = PlayerStarshipStore.getKey()
+        for(var key in this.data) {
+            this.data[key].cooldown -= tick
+            if(key == pkey) {
+                var dx = this.data[key].velocity.x * tick
+                var dy = this.data[key].velocity.y * tick
+                StarshipActions.StarshipMove(key, dx, dy)
 
-        this.data[key].cooldown -= tick
-
-        var dx = this.data[key].velocity.x * tick
-        var dy = this.data[key].velocity.y * tick
-        StarshipActions.StarshipMove(key, dx, dy)
-
-        if(this.data[key].velocity.x < 0) {
-            this.data[key].velocity.x += deacceleration * tick
-            if(this.data[key].velocity.x > 0) {
-                this.data[key].velocity.x = 0
-            }
-        }
-        else if(this.data[key].velocity.x > 0) {
-            this.data[key].velocity.x -= deacceleration * tick
-            if(this.data[key].velocity.x < 0) {
-                this.data[key].velocity.x = 0
-            }
-        }
-        if(this.data[key].velocity.y < 0) {
-            this.data[key].velocity.y += deacceleration * tick
-            if(this.data[key].velocity.y > 0) {
-                this.data[key].velocity.y = 0
-            }
-        }
-        else if(this.data[key].velocity.y > 0) {
-            this.data[key].velocity.y -= deacceleration * tick
-            if(this.data[key].velocity.y < 0) {
-                this.data[key].velocity.y = 0
+                if(this.data[key].velocity.x < 0) {
+                    this.data[key].velocity.x += deacceleration * tick
+                    if(this.data[key].velocity.x > 0) {
+                        this.data[key].velocity.x = 0
+                    }
+                }
+                else if(this.data[key].velocity.x > 0) {
+                    this.data[key].velocity.x -= deacceleration * tick
+                    if(this.data[key].velocity.x < 0) {
+                        this.data[key].velocity.x = 0
+                    }
+                }
+                if(this.data[key].velocity.y < 0) {
+                    this.data[key].velocity.y += deacceleration * tick
+                    if(this.data[key].velocity.y > 0) {
+                        this.data[key].velocity.y = 0
+                    }
+                }
+                else if(this.data[key].velocity.y > 0) {
+                    this.data[key].velocity.y -= deacceleration * tick
+                    if(this.data[key].velocity.y < 0) {
+                        this.data[key].velocity.y = 0
+                    }
+                }
+            } else {
+                var xdist = this.data[pkey].position.x - this.data[key].position.x
+                var ydist = this.data[pkey].position.x - this.data[key].position.x
+                var dist = Math.sqrt(xdist * xdist + ydist * ydist)
+                if(dist < 5) { //if the hero is near!
+                    if(this.data[key].cooldown <= 0) {
+                        this.data[key].cooldown = 1.5
+                        var modules = this.data[key].modules
+                        for(var index in modules) {
+                            var module = modules[index]
+                            if(module.category == "turret") {
+                                var x = module.position.x
+                                var y = module.position.y
+                                var r = Math.atan2(y, x) + (Math.PI / 2)
+                                r += this.data[key].rotation * (Math.PI/180)
+                                var m = Math.sqrt(x * x + y * y)
+                                x = m * Math.sin(r)
+                                y = m * Math.cos(r) * -1
+                                x += this.data[key].position.x
+                                y += this.data[key].position.y
+                                ProjectileActions.AddProjectile(this.data[key], x, y)
+                            }
+                        }
+                    }
+                }
             }
         }
         
