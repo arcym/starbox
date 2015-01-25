@@ -35,6 +35,7 @@ var Starship = React.createClass({
             ancient: this.props.data.affiliation == "ancient",
             rebellion: this.props.data.affiliation == "rebellion",
             federation: this.props.data.affiliation == "federation",
+            locust: this.props.data.affiliation == "locust"
         })
     },
     renderModules: function() {

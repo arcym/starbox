@@ -82,8 +82,8 @@ var StarshipStore = Reflux.createStore({
         1: {
             key: 1,
             position: {
-                x: -4,
-                y: 0
+                x: -7,
+                y: -7
             },
             velocity: {
                 x: 0,
@@ -129,8 +129,8 @@ var StarshipStore = Reflux.createStore({
         2: {
             key: 2,
             position: {
-                x: 5,
-                y: 0
+                x: 7,
+                y: 7
             },
             velocity: {
                 x: 0,
@@ -185,6 +185,101 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 1
+                    }
+                }
+            ]
+        },
+        3: {
+            key: 3,
+            position: {
+                x: -7,
+                y: 7
+            },
+            velocity: {
+                x: 0,
+                y: 0
+            },
+            rotation: 0,
+            affiliation: "locust",
+            modules: [
+                {
+                    category: "hull",
+                    affiliation: "locust",
+                    position: {
+                        x: -1,
+                        y: 0
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "locust",
+                    position: {
+                        x: -1,
+                        y: -1
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "locust",
+                    position: {
+                        x: -1,
+                        y: 1
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "locust",
+                    position: {
+                        x: 1,
+                        y: 0
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "locust",
+                    position: {
+                        x: 1,
+                        y: -1
+                    }
+                },
+                {
+                    category: "hull",
+                    affiliation: "locust",
+                    position: {
+                        x: 1,
+                        y: 1
+                    }
+                },
+                {
+                    category: "turret",
+                    affiliation: "locust",
+                    position: {
+                        x: -1,
+                        y: -2
+                    }
+                },
+                {
+                    category: "turret",
+                    affiliation: "locust",
+                    position: {
+                        x: 1,
+                        y: -2
+                    }
+                },
+                {
+                    category: "engine",
+                    affiliation: "locust",
+                    position: {
+                        x: -1,
+                        y: 2
+                    }
+                },
+                {
+                    category: "engine",
+                    affiliation: "locust",
+                    position: {
+                        x: 1,
+                        y: 2
                     }
                 }
             ]

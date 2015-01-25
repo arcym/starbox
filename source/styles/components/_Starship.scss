@@ -16,6 +16,7 @@
     &.ancient {background-image: url("./assets/images/ancient.core.svg");}
     &.rebellion {background-image: url("./assets/images/rebellion.core.svg");}
     &.federation {background-image: url("./assets/images/federation.core.svg");}
+    &.locust {background-image: url("./assets/images/locust.core.svg");}
 
     .module
     {
@@ -30,5 +31,8 @@
         &.federation.hull {background-image: url("./assets/images/federation.hull.svg");}
         &.federation.engine {background-image: url("./assets/images/federation.engine.svg");}
         &.federation.turret {background-image: url("./assets/images/federation.turret.svg");}
+        &.locust.hull {background-image: url("./assets/images/locust.hull.svg");}
+        &.locust.engine {background-image: url("./assets/images/locust.engine.svg");}
+        &.locust.turret {background-image: url("./assets/images/locust.turret.svg");}
     }
 }

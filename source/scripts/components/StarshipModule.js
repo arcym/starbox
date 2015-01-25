@@ -19,7 +19,8 @@ var StarshipModule = React.createClass({
             turret: this.props.data.category == "turret",
             ancient: this.props.data.affiliation == "ancient",
             rebellion: this.props.data.affiliation == "rebellion",
-            federation: this.props.data.affiliation == "federation"
+            federation: this.props.data.affiliation == "federation",
+            locust: this.props.data.affiliation == "locust"
         })
     }
 })
