@@ -10,7 +10,7 @@ var gulp_uglify = require("gulp-uglify")
 var gulp_if = require("gulp-if")
 
 var chalk = require("chalk")
-var server = require("pushstate-server")
+var express = require("express")
 var vinyl_buffer = require("vinyl-buffer")
 var vinyl_source = require("vinyl-source-stream")
 
@@ -95,7 +95,9 @@ gulp.task("ghpages", function()
 
 gulp.task("watch", function()
 {
-    server.start({port: 1271, directory: "./gulps"})
+    var server = express()
+    server.use(express.static("./gulps"))
+    server.listen(1271)
     gulp_livereload.listen()
 
     gulp.watch("./source/**/*.js", ["scripts"])
