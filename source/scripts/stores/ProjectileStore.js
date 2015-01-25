@@ -1,5 +1,6 @@
 var LoopActions = require("<scripts>/actions/LoopActions")
 var StarshipStore = require("<scripts>/stores/StarshipStore")
+var StarshipActions = require("<scripts>/actions/StarshipActions")
 var ProjectileActions = require("<scripts>/actions/ProjectileActions")
 
 var ProjectileStore = Reflux.createStore({
@@ -53,9 +54,16 @@ var ProjectileStore = Reflux.createStore({
                     var dist = Math.sqrt(xdist * xdist + ydist * ydist)
                     if(dist < 0.05 + 0.5) {
                         ProjectileActions.RemoveProjectile(i)
+                        starship.damage -= 1
+                        if(starship.damage <= 0) {
+                            StarshipActions.DestroyStarship(j)
+                            //PLAY EXPLOSION SOUND HERE
+                        } else {
+                            //PLAY SPECIAL HURT SOUND HERE
+                        }
                     }
-                    for(var index = 0; index < starship.modules.length; index++) {
-                        var module = starship.modules[index]
+                    for(var k in starship.modules) {
+                        var module = starship.modules[k]
                         var x = module.position.x
                         var y = module.position.y
                         var r = Math.atan2(y, x) + (Math.PI / 2)
@@ -70,9 +78,15 @@ var ProjectileStore = Reflux.createStore({
                         var ydist = projectile.position.y - y
                         var dist = Math.sqrt(xdist * xdist + ydist * ydist)
                         if(dist < 0.05 + 0.5) {
-                            var sound = Math.floor(Math.random() * 6)
-                            new Audio("./assets/sounds/hurt" + sound + ".wav").play()
                             ProjectileActions.RemoveProjectile(i)
+                            module.damage -= 1
+                            if(module.damage <= 0) {
+                                StarshipActions.DestroyModule(k)
+                                //PLAY EXPLOSION SOUND HERE
+                            } else {
+                                var sound = Math.floor(Math.random() * 6)
+                                new Audio("./assets/sounds/hurt" + sound + ".wav").play()
+                            }
                         }
                     }
                 }

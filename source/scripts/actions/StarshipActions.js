@@ -2,7 +2,7 @@ var StarshipActions = Reflux.createActions([
 	"StarshipAccelerate", "StarshipDeaccelerate",
 	"StarshipRotateLeft", "StarshipRotateRight",
 	"StarshipMove", "StarshipFireTurrets",
-	"StarshipExplode"
+	"StarshipExplode", "DestroyModule", "DestroyStarship"
 ])
 
 module.exports = StarshipActions

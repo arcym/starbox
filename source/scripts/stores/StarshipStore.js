@@ -25,6 +25,7 @@ var StarshipStore = Reflux.createStore({
             rotation: 0,
             affiliation: "federation",
             cooldown: 0,
+            damage: 4,
             modules: [
                 {
                     category: "hull",
@@ -32,7 +33,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: 0
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "hull",
@@ -40,7 +42,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 0
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "hull",
@@ -48,7 +51,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: -1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "hull",
@@ -56,7 +60,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "turret",
@@ -64,7 +69,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: -2
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -72,7 +78,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -80,7 +87,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 }
             ]
         },
@@ -96,6 +104,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: -12.5 - 90 - 45,
             affiliation: "rebellion",
+            damage: 4,
             modules: [
                 {
                     category: "hull",
@@ -103,7 +112,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "hull",
@@ -111,7 +121,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: -1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "turret",
@@ -119,7 +130,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: -2
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -127,7 +139,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 0,
                         y: 2
-                    }
+                    },
+                    damage: 3
                 }
             ]
         },
@@ -143,6 +156,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: 0,
             affiliation: "ancient",
+            damage: 4,
             modules: [
                 {
                     category: "hull",
@@ -150,7 +164,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: 0
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "hull",
@@ -158,7 +173,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 0
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "turret",
@@ -166,7 +182,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: -1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "turret",
@@ -174,7 +191,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: -1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -182,7 +200,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -190,7 +209,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 }
             ]
         },
@@ -206,6 +226,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: 45,
             affiliation: "locust",
+            damage: 4,
             modules: [
                 {
                     category: "hull",
@@ -213,7 +234,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: 0
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "hull",
@@ -221,7 +243,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 0
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "turret",
@@ -229,7 +252,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: -1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "turret",
@@ -237,7 +261,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: -1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -245,7 +270,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: -1,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 },
                 {
                     category: "engine",
@@ -253,7 +279,8 @@ var StarshipStore = Reflux.createStore({
                     position: {
                         x: 1,
                         y: 1
-                    }
+                    },
+                    damage: 3
                 }
             ]
         }
@@ -373,6 +400,12 @@ var StarshipStore = Reflux.createStore({
         }
         
         this.retrigger()
+    },
+    onDestroyModule: function(key) {
+        console.log(key)
+    },
+    onDestroyStarship: function(key) {
+        console.log(key)
     }
 })
 

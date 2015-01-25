@@ -40,9 +40,9 @@ var Starship = React.createClass({
     },
     renderModules: function() {
         var renderings = []
-        for(var index = 0; index < this.props.data.modules.length; index++) {
-            var data = this.props.data.modules[index]
-            renderings.push(<StarshipModule key={index} data={data}/>) 
+        for(var key in this.props.data.modules) {
+            var data = this.props.data.modules[key]
+            renderings.push(<StarshipModule key={key} data={data}/>) 
         }
         return renderings
     }
