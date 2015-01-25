@@ -54,7 +54,7 @@ var GalaxyStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        "1.2": {
+        "2.1": {
             category: "engine",
             affiliation: affiliation,
             position: {

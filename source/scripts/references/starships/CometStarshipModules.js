@@ -9,29 +9,11 @@ var CometStarshipModules = function(affiliation) {
             },
             damage: 3
         },
-        "2": {
-            category: "hull",
-            affiliation: affiliation,
-            position: {
-                x: 1,
-                y: 0
-            },
-            damage: 3
-        },
         "1.1": {
             category: "turret",
             affiliation: affiliation,
             position: {
                 x: -1,
-                y: -1
-            },
-            damage: 3
-        },
-        "2.1": {
-            category: "turret",
-            affiliation: affiliation,
-            position: {
-                x: 1,
                 y: -1
             },
             damage: 3
@@ -42,6 +24,24 @@ var CometStarshipModules = function(affiliation) {
             position: {
                 x: -1,
                 y: 1
+            },
+            damage: 3
+        },
+        "2": {
+            category: "hull",
+            affiliation: affiliation,
+            position: {
+                x: 1,
+                y: 0
+            },
+            damage: 3
+        },
+        "2.1": {
+            category: "turret",
+            affiliation: affiliation,
+            position: {
+                x: 1,
+                y: -1
             },
             damage: 3
         },
