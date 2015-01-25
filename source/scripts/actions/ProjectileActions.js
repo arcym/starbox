@@ -1,5 +1,5 @@
 var ProjectileActions = Reflux.createActions([
-	"ProjectileFire"
+	"AddProjectile", "RemoveProjectile"
 ])
 
 module.exports = ProjectileActions
