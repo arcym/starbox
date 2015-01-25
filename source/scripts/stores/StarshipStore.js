@@ -22,7 +22,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
-            rotation: 45,
+            rotation: 0,
             affiliation: "federation",
             cooldown: 0,
             modules: [
@@ -307,7 +307,7 @@ var StarshipStore = Reflux.createStore({
     },
     onStarshipRotateRight: function(tick) {
         var key = PlayerStarshipStore.getKey()
-        this.data[key].rotation += 45 * tick
+        this.data[key].rotation += 45*1.5 * tick
         if(this.data[key].rotation > 360) {
             this.data[key].rotation -= 360
         }
@@ -320,13 +320,13 @@ var StarshipStore = Reflux.createStore({
             for(var index = 0; index < modules.length; index++) {
                 var module = modules[index]
                 if(module.category == "turret") {
-                    var x = module.position.x + 1
+                    var x = module.position.x
                     var y = module.position.y
+                    var r = Math.atan2(y, x) + (Math.PI / 2)
+                    r += this.data[key].rotation * (Math.PI/180)
                     var m = Math.sqrt(x * x + y * y)
-                    if(y > 0) {m = -m}
-                    console.log(x, y, m)
-                    x = m * Math.sin(this.data[key].rotation * (Math.PI/180))
-                    y = m * Math.cos(this.data[key].rotation * (Math.PI/180)) * -1
+                    x = m * Math.sin(r)
+                    y = m * Math.cos(r) * -1
                     x += this.data[key].position.x
                     y += this.data[key].position.y
                     ProjectileActions.AddProjectile(this.data[key], x, y)
