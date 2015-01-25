@@ -1,4 +1,6 @@
 var LoopActions = require("<scripts>/actions/LoopActions")
+var StarshipStore = require("<scripts>/stores/StarshipStore")
+var ProjectileActions = require("<scripts>/actions/ProjectileActions")
 
 var ProjectileStore = Reflux.createStore({
     data: [
@@ -6,7 +8,11 @@ var ProjectileStore = Reflux.createStore({
     getData: function() {
         return this.data
     },
-    addProjectile: function(starship) {
+    listenables: [
+        ProjectileActions,
+        LoopActions
+    ],
+    onProjectileFire: function(starship) {
         this.data.push({
             position: {
                 x: starship.position.x,
@@ -19,13 +25,22 @@ var ProjectileStore = Reflux.createStore({
             rotation: starship.rotation
         })
     },
-    listenables: [
-        LoopActions
-    ],
     onTick: function(tick) {
-        for(var index = 0; index < this.data.length; index++) {
-            this.data[index].position.x += this.data[index].velocity.x * tick
-            this.data[index].position.y += this.data[index].velocity.y * tick
+        var starships = StarshipStore.getData()
+        for(var i = 0; i < this.data.length; i++) {
+            var projectile = this.data[i]
+            projectile.position.x += projectile.velocity.x * tick
+            projectile.position.y += projectile.velocity.y * tick
+
+            for(var j = 0; j < starships.length; j++) {
+                var starship = starships[j]
+                if(projectile.position.x < starship.position.x + 0.5
+                && projectile.position.x > starship.position.x - 0.5
+                && projectile.position.y < starship.position.y + 0.5
+                && projectile.position.y > starship.position.y + 0.5) {
+                    console.log("HIT")
+                }
+            }
         }
         this.retrigger()
     }

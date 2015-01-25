@@ -1,7 +1,7 @@
 var LoopActions = require("<scripts>/actions/LoopActions")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 var PlayerStarshipStore = require("<scripts>/stores/PlayerStarshipStore")
-var ProjectileStore = require("<scripts>/stores/ProjectileStore")
+var ProjectileActions = require("<scripts>/actions/ProjectileActions")
 
 var acceleration = 2
 var deacceleration = 0.25
@@ -320,7 +320,7 @@ var StarshipStore = Reflux.createStore({
                     //x *= Math.sin(this.data[key].rotation * (Math.PI/180))
                     //y *= Math.sin(this.data[key].rotation * (Math.PI/180))
 
-                    ProjectileStore.addProjectile(this.data[key])
+                    ProjectileActions.ProjectileFire(this.data[key])
                 }
             }
         }
