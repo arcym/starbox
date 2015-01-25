@@ -254,12 +254,32 @@ var StarshipStore = Reflux.createStore({
 
     },
     onDestroyStarship: function(jey) {
-        for(var k in this.data[jey].modules) {
-            var module = this.data[jey].modules[k]
-            var key = jey + "." + k
-            StarshipModuleStore.addModule(key, module)
+        var pkey = this.getPlayerData().key
+        if(jey == pkey) {
+            alert("Oh no, you died!")
+            var affiliations = ["federation", "locust", "ancient", "rebellion"]
+            var moduless = [GalaxyStarshipModules, CometStarshipModules, ProtoplanetStarshipModules]
+            var affiliation = affiliations[Math.floor(Math.random() * 4)]
+            var modules = moduless[Math.floor(Math.random() * 3)]
+            this.data[pkey] = {
+                key: 0,
+                position: {
+                    x: 0,
+                    y: 0
+                },
+                velocity: {
+                    x: 0,
+                    y: 0
+                },
+                rotation: 0,
+                affiliation: affiliation,
+                cooldown: 0,
+                damage: 4,
+                modules: modules(affiliation)
+            }
+        } else {
+            delete this.data[jey]
         }
-        delete this.data[jey]
     }
 })
 

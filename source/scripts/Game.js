@@ -48,7 +48,7 @@ var Game = React.createClass({
                     {this.renderStore(this.state["starships"], StarshipBlip)}
                 </div>
                 <div className="instructions">
-                    Use W to accelerate, and A/D to rotate.
+                    Use W to accelerate, and A/D to rotate. Use SPACE to shoot!
                 </div>
             </GameFrame>
         )
