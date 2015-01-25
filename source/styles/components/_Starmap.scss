@@ -1,16 +1,35 @@
 .starmap
 {
 	z-index: 2;
-	top: 0.5em;
-	width: 2em;
-	right: 0.5em;
-	height: 2em;
-    padding: 0.25em;
+	top: 2em;
+	right: 2em;
+	width: 25em;
+	height: 25em;
 	position: absolute;
 
-	border-width: 0.01em;
+	font-size: 0.125em;
+
 	border-style: solid;
+	border-width: 1em;
+    border-radius: 10em;
 	border-color: #143753;
-    border-radius: 5em;
+
+	overflow: hidden;
 	background-color: #467F97;
+
+	.starship-blip
+	{
+		width: 1em;
+		height: 1em;
+
+		position: absolute;
+
+		border-radius: 3em;
+		background-color: red;
+
+		&.ancient {background-color: #444}
+		&.rebellion {background-color: #3F2A14}
+		&.federation {background-color: #BBB}
+		&.locust {background-color: #6B238E}
+	}
 }

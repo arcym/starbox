@@ -4,7 +4,7 @@ var StarStore = require("<scripts>/stores/StarStore")
 var Starship = require("<scripts>/components/Starship")
 var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
-var Starmap = require("<scripts>/components/Starmap")
+var StarshipBlip = require("<scripts>/components/StarshipBlip")
 
 var LoopStore = require("<scripts>/stores/LoopStore")
 var MusicStore = require("<scripts>/stores/MusicStore")
@@ -31,9 +31,11 @@ var Game = React.createClass({
     render: function() {
         return (
             <GameFrame>
-                <Starmap/>
                 {this.renderStore(this.state["stars"], Star)}
                 {this.renderStore(this.state["starships"], Starship)}
+                <div className="starmap">
+                    {this.renderStore(this.state["starships"], StarshipBlip)}
+                </div>
             </GameFrame>
         )
     },

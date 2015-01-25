@@ -136,7 +136,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
-            rotation: 12.5 + 90 + 45,
+            rotation: 0,
             affiliation: "ancient",
             modules: [
                 {
@@ -199,7 +199,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
-            rotation: 0,
+            rotation: 45,
             affiliation: "locust",
             modules: [
                 {
