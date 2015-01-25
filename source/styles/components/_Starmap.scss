@@ -36,7 +36,7 @@ $dark-space-blue: #143753;
     height: 25em;
     position: absolute;
 
-    font-size: 0.125em;
+    font-size: 0.09375em;
 
     border-width: 1em;
     border-radius: 15em;
@@ -102,6 +102,8 @@ $dark-space-blue: #143753;
         right: 0em;
         bottom: 0em;
         margin: auto;
+        width: 50%;
+        height: 50%;
         position: absolute;
 
         opacity: 0.25;
@@ -109,8 +111,5 @@ $dark-space-blue: #143753;
         border-width: 0.5em;
         border-style: dotted;
         border-radius: 15em;
-
-        &:nth-of-type(2) {width: 66%; height: 66%;}
-        &:nth-of-type(3) {width: 33%; height: 33%;}
     }
 }

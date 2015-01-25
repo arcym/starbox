@@ -36,8 +36,10 @@ var Game = React.createClass({
                 <div className="starmap">
                     <div className="starmap-radar"/>
                     <div className="starmap-circle"/>
-                    <div className="starmap-circle"/>
                     {this.renderStore(this.state["starships"], StarshipBlip)}
+                </div>
+                <div className="instructions">
+                    Use arrow keys to move, and space bar to shoot.
                 </div>
             </GameFrame>
         )
