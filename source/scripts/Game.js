@@ -22,6 +22,10 @@ var Game = React.createClass({
         InputActionStore.addAction("a", StarshipActions.StarshipRotateLeft)
         InputActionStore.addAction("d", StarshipActions.StarshipRotateRight)
         InputActionStore.addAction("space bar", StarshipActions.StarshipFireTurrets)
+        InputActionStore.addAction("up arrow", StarshipActions.StarshipAccelerate)
+        InputActionStore.addAction("down arrow", StarshipActions.StarshipDeaccelerate)
+        InputActionStore.addAction("left arrow", StarshipActions.StarshipRotateLeft)
+        InputActionStore.addAction("right arrow", StarshipActions.StarshipRotateRight)
     },
     render: function() {
         return (
