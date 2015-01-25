@@ -3,7 +3,7 @@ var StarshipActions = require("<scripts>/actions/StarshipActions")
 var PlayerStarshipStore = require("<scripts>/stores/PlayerStarshipStore")
 
 var acceleration = 2
-var deacceleration = 1
+var deacceleration = 0.25
 var maximum_velocity = 3
 
 var StarshipStore = Reflux.createStore({
@@ -18,7 +18,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
-            rotation: 12.5,
+            rotation: 0,
             affiliation: "federation",
             modules: [
                 {
@@ -200,14 +200,21 @@ var StarshipStore = Reflux.createStore({
         LoopActions,
         StarshipActions
     ],
-    /*onStarshipAccelerate: function(tick) {
+    onStarshipAccelerate: function(tick) {
         var key = PlayerStarshipStore.getKey()
-        this.data[key].velocity.x = 
-        this.data[key].velocity.y -= acceleration * tick
-        if(this.data[key].velocity.y < -maximum_velocity) {
+        this.data[key].velocity.x += Math.sin(this.data[key].rotation * (Math.PI/180))
+        this.data[key].velocity.y += Math.cos(this.data[key].rotation * (Math.PI/180)) * -1
+
+        if(this.data[key].velocity.x < -maximum_velocity) {
+            this.data[key].velocity.x = -maximum_velocity
+        } else if(this.data[key].velocity.x > maximum_velocity) {
+            this.data[key].velocity.x = maximum_velocity
+        } if(this.data[key].velocity.y < -maximum_velocity) {
             this.data[key].velocity.y = -maximum_velocity
+        } else if(this.data[key].velocity.y > maximum_velocity) {
+            this.data[key].velocity.y = maximum_velocity
         }
-    },*/
+    },
     onStarshipRotateLeft: function(tick) {
         var key = PlayerStarshipStore.getKey()
         this.data[key].rotation -= 45*1.5 * tick
