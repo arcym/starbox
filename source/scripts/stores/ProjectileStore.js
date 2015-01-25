@@ -29,6 +29,9 @@ var ProjectileStore = Reflux.createStore({
             time: 0
         }
     },
+    onRemoveProjectile: function(key) {
+        delete this.data[key]
+    },
     onTick: function(tick) {
         var starships = StarshipStore.getData()
         for(var i in this.data) {
