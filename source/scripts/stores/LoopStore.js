@@ -9,7 +9,7 @@ var LoopStore = Reflux.createStore({
     },
     init: function() {
         (function loop(time) {
-            LoopActions.Tick((Date.now() - time) / 1000)
+            LoopActions.Tick(Math.min((Date.now() - time) / 1000, 1))
             require("raf")(loop.bind(null, Date.now()))
         })(Date.now())
     },
