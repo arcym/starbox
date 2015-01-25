@@ -20,6 +20,7 @@ var StarshipStore = Reflux.createStore({
             },
             rotation: 0,
             affiliation: "federation",
+            cooldown: 0,
             modules: [
                 {
                     category: "hull",
@@ -305,12 +306,20 @@ var StarshipStore = Reflux.createStore({
             this.data[key].rotation -= 360
         }
     },
+    onStarshipFireTurrets: function(tick) {
+        var key = PlayerStarshipStore.getKey()
+        if(this.data[key].cooldown <= 0) {
+            this.data[key].cooldown = 0.5
+        }
+    },
     onStarshipMove: function(key, dx, dy) {
         this.data[key].position.x += dx
         this.data[key].position.y += dy
     },
     onTick: function(tick) {
         var key = PlayerStarshipStore.getKey()
+
+        this.data[key].cooldown -= tick
 
         var dx = this.data[key].velocity.x * tick
         var dy = this.data[key].velocity.y * tick
