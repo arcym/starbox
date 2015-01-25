@@ -3,6 +3,10 @@ var StarshipActions = require("<scripts>/actions/StarshipActions")
 var PlayerStarshipStore = require("<scripts>/stores/PlayerStarshipStore")
 var ProjectileActions = require("<scripts>/actions/ProjectileActions")
 
+var GalaxyStarshipModules = require("<scripts>/references/starships/GalaxyStarshipModules")
+var ProtoplanetStarshipModules = require("<scripts>/references/starships/ProtoplanetStarshipModules")
+var CometStarshipModules = require("<scripts>/references/starships/CometStarshipModules")
+
 var acceleration = 2
 var deacceleration = 0.25
 var maximum_velocity = 3
@@ -26,71 +30,7 @@ var StarshipStore = Reflux.createStore({
             affiliation: "federation",
             cooldown: 0,
             damage: 4,
-            modules: [
-                {
-                    category: "hull",
-                    affiliation: "federation",
-                    position: {
-                        x: -1,
-                        y: 0
-                    },
-                    damage: 3
-                },
-                {
-                    category: "hull",
-                    affiliation: "federation",
-                    position: {
-                        x: 1,
-                        y: 0
-                    },
-                    damage: 3
-                },
-                {
-                    category: "hull",
-                    affiliation: "federation",
-                    position: {
-                        x: 0,
-                        y: -1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "hull",
-                    affiliation: "federation",
-                    position: {
-                        x: 0,
-                        y: 1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "turret",
-                    affiliation: "federation",
-                    position: {
-                        x: 0,
-                        y: -2
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "federation",
-                    position: {
-                        x: -1,
-                        y: 1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "federation",
-                    position: {
-                        x: 1,
-                        y: 1
-                    },
-                    damage: 3
-                }
-            ]
+            modules: GalaxyStarshipModules("federation")
         },
         1: {
             key: 1,
@@ -105,44 +45,7 @@ var StarshipStore = Reflux.createStore({
             rotation: -12.5 - 90 - 45,
             affiliation: "rebellion",
             damage: 4,
-            modules: [
-                {
-                    category: "hull",
-                    affiliation: "rebellion",
-                    position: {
-                        x: 0,
-                        y: 1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "hull",
-                    affiliation: "rebellion",
-                    position: {
-                        x: 0,
-                        y: -1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "turret",
-                    affiliation: "rebellion",
-                    position: {
-                        x: 0,
-                        y: -2
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "rebellion",
-                    position: {
-                        x: 0,
-                        y: 2
-                    },
-                    damage: 3
-                }
-            ]
+            modules: ProtoplanetStarshipModules("rebellion")
         },
         2: {
             key: 2,
@@ -157,62 +60,7 @@ var StarshipStore = Reflux.createStore({
             rotation: 0,
             affiliation: "ancient",
             damage: 4,
-            modules: [
-                {
-                    category: "hull",
-                    affiliation: "ancient",
-                    position: {
-                        x: -1,
-                        y: 0
-                    },
-                    damage: 3
-                },
-                {
-                    category: "hull",
-                    affiliation: "ancient",
-                    position: {
-                        x: 1,
-                        y: 0
-                    },
-                    damage: 3
-                },
-                {
-                    category: "turret",
-                    affiliation: "ancient",
-                    position: {
-                        x: -1,
-                        y: -1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "turret",
-                    affiliation: "ancient",
-                    position: {
-                        x: 1,
-                        y: -1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "ancient",
-                    position: {
-                        x: -1,
-                        y: 1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "ancient",
-                    position: {
-                        x: 1,
-                        y: 1
-                    },
-                    damage: 3
-                }
-            ]
+            modules: CometStarshipModules("ancient")
         },
         3: {
             key: 3,
@@ -227,62 +75,7 @@ var StarshipStore = Reflux.createStore({
             rotation: 45,
             affiliation: "locust",
             damage: 4,
-            modules: [
-                {
-                    category: "hull",
-                    affiliation: "locust",
-                    position: {
-                        x: -1,
-                        y: 0
-                    },
-                    damage: 3
-                },
-                {
-                    category: "hull",
-                    affiliation: "locust",
-                    position: {
-                        x: 1,
-                        y: 0
-                    },
-                    damage: 3
-                },
-                {
-                    category: "turret",
-                    affiliation: "locust",
-                    position: {
-                        x: -1,
-                        y: -1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "turret",
-                    affiliation: "locust",
-                    position: {
-                        x: 1,
-                        y: -1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "locust",
-                    position: {
-                        x: -1,
-                        y: 1
-                    },
-                    damage: 3
-                },
-                {
-                    category: "engine",
-                    affiliation: "locust",
-                    position: {
-                        x: 1,
-                        y: 1
-                    },
-                    damage: 3
-                }
-            ]
+            modules: CometStarshipModules("locust")
         }
     },
     getData: function() {
