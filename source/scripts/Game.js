@@ -6,6 +6,9 @@ var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 var StarshipBlip = require("<scripts>/components/StarshipBlip")
 
+var Projectile = require("<scripts>/components/Projectile")
+var ProjectileStore = require("<scripts>/stores/ProjectileStore")
+
 var LoopStore = require("<scripts>/stores/LoopStore")
 var MusicStore = require("<scripts>/stores/MusicStore")
 var InputActionStore = require("<scripts>/stores/InputActionStore")
@@ -15,7 +18,8 @@ var GameFrame = require("<scripts>/components/GameFrame")
 var Game = React.createClass({
     mixins: [
         Reflux.connect(StarshipStore, "starships"),
-        Reflux.connect(StarStore, "stars")
+        Reflux.connect(StarStore, "stars"),
+        Reflux.connect(ProjectileStore, "projectiles")
     ],
     componentDidMount: function() {
         InputActionStore.addAction("w", StarshipActions.StarshipAccelerate)
@@ -32,6 +36,7 @@ var Game = React.createClass({
         return (
             <GameFrame>
                 {this.renderStore(this.state["stars"], Star)}
+                {this.renderStore(this.state["projectiles"], Projectile)}
                 {this.renderStore(this.state["starships"], Starship)}
                 <div className="starmap">
                     <div className="starmap-radar"/>
@@ -39,7 +44,7 @@ var Game = React.createClass({
                     {this.renderStore(this.state["starships"], StarshipBlip)}
                 </div>
                 <div className="instructions">
-                    Use arrow keys to move, and space bar to shoot.
+                    Use W to accelerate, and A/D to rotate.
                 </div>
             </GameFrame>
         )

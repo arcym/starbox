@@ -1,6 +1,7 @@
 var LoopActions = require("<scripts>/actions/LoopActions")
 var StarshipActions = require("<scripts>/actions/StarshipActions")
 var PlayerStarshipStore = require("<scripts>/stores/PlayerStarshipStore")
+var ProjectileStore = require("<scripts>/stores/ProjectileStore")
 
 var acceleration = 2
 var deacceleration = 0.25
@@ -18,7 +19,7 @@ var StarshipStore = Reflux.createStore({
                 x: 0,
                 y: 0
             },
-            rotation: 0,
+            rotation: 45,
             affiliation: "federation",
             cooldown: 0,
             modules: [
@@ -310,6 +311,21 @@ var StarshipStore = Reflux.createStore({
         var key = PlayerStarshipStore.getKey()
         if(this.data[key].cooldown <= 0) {
             this.data[key].cooldown = 0.5
+            var modules = this.data[key].modules
+            for(var index = 0; index < modules.length; index++) {
+                var module = modules[index]
+                if(module.category == "turret") {
+                    //var x = module.position.x
+                    //var y = module.position.y
+                    //x *= Math.sin(this.data[key].rotation * (Math.PI/180))
+                    //y *= Math.sin(this.data[key].rotation * (Math.PI/180))
+                    x = this.data[key].position.x
+                    y = this.data[key].position.y
+                    r = this.data[key].rotation
+
+                    ProjectileStore.addProjectile(x, y, r)
+                }
+            }
         }
     },
     onStarshipMove: function(key, dx, dy) {
