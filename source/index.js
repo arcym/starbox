@@ -1,15 +1,27 @@
-window.React = require("react/addons")
-window.Reflux = require("reflux")
-window.Firebase = require("firebase")
-window.UUID = require("node-uuid")
+window.React = require("react")
+window.Phlux = require("phlux")
 
-window.Reflux.StoreMethods.getInitialState = function() {return this.getData()}
-window.Reflux.StoreMethods.retrigger = function() {this.trigger(this.getData())}
+window.Keyb = require("keyb")
+window.Tickly = require("tickly")
 
-window.MIN_WIDTH = 0
-window.MIN_HEIGHT = 0
-window.MAX_WIDTH = 16
-window.MAX_HEIGHT = 9
+window.WIDTH = 20
+window.HEIGHT = 15
 
-var Game = require("<scripts>/Game")
-React.render(<Game/>, document.body)
+var GameFrame = require("<scripts>/parts/GameFrame")
+
+var Starbox = React.createClass({
+    render: function() {
+        return (
+            <GameFrame aspect-ratio="20x15">
+                Hello World!
+            </GameFrame>
+        )
+    },
+    componentDidMount: function() {
+        Tickly.loop(function() {
+            
+        })
+    }
+})
+
+React.render(<Starbox/>, document.body)

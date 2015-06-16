@@ -1,23 +1,15 @@
-*
-{
-    margin: 0px;
-}
+@import "./styles/_Defaults.scss";
+@import "./styles/_Fonts.scss";
+@import "./styles/_GameFrame.scss";
 
-@import "./styles/references/_Fonts.scss";
-@import "./styles/components/_GameFrame.scss";
-@import "./styles/components/_Starship.scss";
-@import "./styles/components/_Star.scss";
-@import "./styles/components/_Starmap.scss";
-@import "./styles/components/_Projectile.scss";
-@import "./styles/components/_Instructions.scss";
-
-body
+html
 {
+    color: #AAA;
+    font-family: goldfish;
 	background-color: #111;
 }
 
 #game-frame
 {
-    font-family: goldfish;
     background-color: #222;
 }

@@ -2,9 +2,10 @@ node_modules
 bower_components
 node_webkit_cache
 
-gulps
-ghpages
-nwapps
-
-.DS_Store
+._*
 *.log
+.DS_Store
+
+build
+nw-apps
+gh-pages
