@@ -18,6 +18,9 @@ var StarshipStore = Phlux.createStore({
                 autodeceleration: true,
                 maximumresponsivity: true
             },
+            parts: {
+                //?!
+            },
             update: function(tick) {
                 if(Keyb.isDown("W")
                 || Keyb.isDown("<up>")) {
@@ -63,28 +66,42 @@ var StarshipStore = Phlux.createStore({
                 } else {
                     if(direction.x != undefined) {
                         this.velocity.x += this.acceleration * direction.x * tick
-                        if(this.velocity.x > this.maxvelocity) {this.velocity.x = this.maxvelocity}
-                        else if(this.velocity.x < -this.maxvelocity) {this.velocity.x = -this.maxvelocity}
+                        if(this.velocity.x > this.maxvelocity) {
+                            this.velocity.x = this.maxvelocity
+                        } else if(this.velocity.x < -this.maxvelocity) {
+                            this.velocity.x = -this.maxvelocity
+                        }
                     } if(direction.y != undefined) {
                         this.velocity.y += this.acceleration * direction.y * tick
-                        if(this.velocity.y > this.maxvelocity) {this.velocity.y = this.maxvelocity}
-                        else if(this.velocity.y < -this.maxvelocity) {this.velocity.y = -this.maxvelocity}
+                        if(this.velocity.y > this.maxvelocity) {
+                            this.velocity.y = this.maxvelocity
+                        } else if(this.velocity.y < -this.maxvelocity) {
+                            this.velocity.y = -this.maxvelocity
+                        }
                     }
                 }
             },
             decelerate: function(tick) {
                 if(this.velocity.x > 0) {
                     this.velocity.x -= this.deceleration * tick
-                    if(this.velocity.x < 0) {this.velocity.x = 0}
+                    if(this.velocity.x < 0) {
+                        this.velocity.x = 0
+                    }
                 } else if(this.velocity.x < 0) {
                     this.velocity.x += this.deceleration * tick
-                    if(this.velocity.x > 0) {this.velocity.x = 0}
+                    if(this.velocity.x > 0) {
+                        this.velocity.x = 0
+                    }
                 } if(this.velocity.y > 0) {
                     this.velocity.y -= this.deceleration * tick
-                    if(this.velocity.y < 0) {this.velocity.y = 0}
+                    if(this.velocity.y < 0) {
+                        this.velocity.y = 0
+                    }
                 } else if(this.velocity.y < 0) {
                     this.velocity.y += this.deceleration * tick
-                    if(this.velocity.y > 0) {this.velocity.y = 0}
+                    if(this.velocity.y > 0) {
+                        this.velocity.y = 0
+                    }
                 }
             },
             translate: function(tick) {
