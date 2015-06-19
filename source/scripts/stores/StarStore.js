@@ -27,7 +27,7 @@ var StarStore = Phlux.createStore({
             this.data[index] = {
                 color: this.getRandomColor(),
                 position: this.getRandomPosition({
-                    //z: index % 12 / 16 + 0.25
+                    z: index % 12 / 16 + 0.25
                 })
             }
         }

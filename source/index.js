@@ -10,23 +10,22 @@ window.HEIGHT = 15
 var GameFrame = require("<scripts>/parts/GameFrame")
 
 var Star = require("<scripts>/parts/Star")
+var Starship = require("<scripts>/parts/Starship")
 var StarStore = require("<scripts>/stores/StarStore")
+var StarshipStore = require("<scripts>/stores/StarshipStore")
 
 var Starbox = React.createClass({
     mixins: [
-        Phlux.connectStore(StarStore, "stars")
+        Phlux.connectStore(StarStore, "stars"),
+        Phlux.connectStore(StarshipStore, "starships")
     ],
     render: function() {
         return (
             <GameFrame aspect-ratio="20x15">
                 {this.renderEntities(Star, this.state["stars"])}
+                {this.renderEntities(Starship, this.state["starships"])}
             </GameFrame>
         )
-    },
-    componentDidMount: function() {
-        Tickly.loop(function(tick) {
-            StarStore.update(tick)
-        })
     },
     renderEntities: function(Class, data) {
         var renderings = []
@@ -37,6 +36,12 @@ var Starbox = React.createClass({
             )
         }
         return renderings
+    },
+    componentDidMount: function() {
+        Tickly.loop(function(tick) {
+            StarshipStore.update(tick)
+            StarStore.update(tick)
+        })
     }
 })
 
