@@ -13,14 +13,42 @@ var StarshipStore = Phlux.createStore({
             },
             maxvelocity: 5,
             acceleration: 30,
+            deceleration: 30,
             deceleration: 15,
             configuration: {
                 autodeceleration: true,
                 maximumresponsivity: true
             },
-            parts: {
-                //?!
-            },
+            parts: [
+                {
+                    type: "link",
+                    position: {
+                        x: 0,
+                        y: -1
+                    }
+                },
+                {
+                    type: "link",
+                    position: {
+                        x: 0,
+                        y: +1
+                    }
+                },
+                {
+                    type: "link",
+                    position: {
+                        x: +1,
+                        y: 0
+                    }
+                },
+                {
+                    type: "engine",
+                    position: {
+                        x: -1,
+                        y: 0
+                    }
+                }
+            ],
             update: function(tick) {
                 if(Keyb.isDown("W")
                 || Keyb.isDown("<up>")) {
