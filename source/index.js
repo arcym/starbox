@@ -8,6 +8,8 @@ window.WIDTH = 20
 window.HEIGHT = 15
 
 var GameFrame = require("<scripts>/parts/GameFrame")
+var UserInterface = require("<scripts>/parts/UserInterface")
+var UserInterfaceStore = require("<scripts>/stores/UserInterfaceStore")
 
 var Box = require("<scripts>/parts/Box")
 var Star = require("<scripts>/parts/Star")
@@ -20,13 +22,15 @@ var Starbox = React.createClass({
     mixins: [
         Phlux.connectStore(BoxStore, "boxes"),
         Phlux.connectStore(StarStore, "stars"),
-        Phlux.connectStore(StarshipStore, "starships")
+        Phlux.connectStore(StarshipStore, "starships"),
+        Phlux.connectStore(UserInterfaceStore, "userinterface"),
     ],
     render: function() {
         return (
             <GameFrame aspect-ratio="20x15">
                 {this.renderEntities(Star, this.state["stars"])}
                 {this.renderEntities(Box, this.state["boxes"])}
+                <UserInterface data={this.state["userinterface"]}/>
             </GameFrame>
         )
     },
