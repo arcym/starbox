@@ -26,8 +26,8 @@ Box.prototype.onMouseOut = function() {
 var BoxStore = Phlux.createStore({
     data: {
         1: new Box({
-            width: 1,
-            height: 1,
+            width: 2,
+            height: 2,
             color: "green",
             name: "T5-623-beta",
             description: "A failed prototype of the T5-624.",
