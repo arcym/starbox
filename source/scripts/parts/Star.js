@@ -5,17 +5,13 @@ var Star = React.createClass({
         )
     },
     renderStyles: function() {
-        var x = this.props.data.position.x
-        var y = this.props.data.position.y
-        var size = this.props.data.position.z * 0.1
-        var color = this.props.data.color
         return {
-            top: y + "em",
-            left: x + "em",
-            width: size + "em",
-            height: size + "em",
             position: "absolute",
-            backgroundColor: color
+            top: this.props.data.position.y + "em",
+            left: this.props.data.position.x + "em",
+            width: this.props.data.position.z * 0.1 + "em",
+            height: this.props.data.position.z * 0.1 + "em",
+            backgroundColor: this.props.data.color
         }
     }
 })
