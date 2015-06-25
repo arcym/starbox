@@ -1,155 +1,135 @@
+var Box = require("<scripts>/classes/Box")
+
 var StarshipStore = Phlux.createStore({
     data: {
         me: {
             position: {
-                x: 3,
-                y: 3,
-                sx: 0,
-                sy: 0
+                x: 5,
+                y: 3
             },
-            velocity: {
-                x: 0,
-                y: 0
-            },
-            maxvelocity: 5,
-            acceleration: 30,
-            deceleration: 30,
-            deceleration: 15,
-            configuration: {
-                autodeceleration: true,
-                maximumresponsivity: true
-            },
-            parts: [
-                {
-                    type: "link",
+            boxes: [
+                new Box({
+                    name: "Part-1",
+                    dimensions: {
+                        width: 1,
+                        height: 1,
+                        color: "#FF9900"
+                    },
                     position: {
                         x: 0,
-                        y: -1
-                    }
-                },
-                {
-                    type: "link",
-                    position: {
-                        x: 0,
-                        y: +1
-                    }
-                },
-                {
-                    type: "link",
-                    position: {
-                        x: +1,
                         y: 0
                     }
-                },
-                {
-                    type: "engine",
+                }),
+                new Box({
+                    name: "Part-2",
+                    dimensions: {
+                        width: 2,
+                        height: 2,
+                        color: "#097054"
+                    },
+                    position: {
+                        x: -2,
+                        y: -1
+                    }
+                }),
+                new Box({
+                    name: "Part-3",
+                    dimensions: {
+                        width: 1,
+                        height: 1,
+                        color: "#FFDE00"
+                    },
+                    position: {
+                        x: -3,
+                        y: -1
+                    }
+                }),
+                new Box({
+                    name: "Part-4",
+                    dimensions: {
+                        width: 3,
+                        height: 1,
+                        color: "#6599FF"
+                    },
                     position: {
                         x: -1,
+                        y: +1
+                    }
+                })
+            ]
+        },
+        alpha: {
+            position: {
+                x: 8,
+                y: 9
+            },
+            boxes: [
+                new Box({
+                    name: "Part-1",
+                    dimensions: {
+                        width: 1,
+                        height: 1,
+                        color: "blue"
+                    },
+                    position: {
+                        x: 0,
                         y: 0
                     }
-                }
-            ],
-            update: function(tick) {
-                if(Keyb.isDown("W")
-                || Keyb.isDown("<up>")) {
-                    this.accelerate(tick, {
-                        y: -1
-                    })
-                }
-                if(Keyb.isDown("S")
-                || Keyb.isDown("<down>")) {
-                    this.accelerate(tick, {
+                }),
+                new Box({
+                    name: "Part-2",
+                    dimensions: [
+                        {
+                            x: 0,
+                            y: -1,
+                            width: 1,
+                            height: 2,
+                            color: "green"
+                        },
+                        {
+                            x: +1,
+                            y: 0,
+                            width: 1,
+                            height: 1,
+                            color: "green"
+                        },
+                    ],
+                    position: {
+                        x: -1,
                         y: +1
-                    })
-                }
-                if(Keyb.isDown("A")
-                || Keyb.isDown("<left>")) {
-                    this.accelerate(tick, {
-                        x: -1
-                    })
-                }
-                if(Keyb.isDown("D")
-                || Keyb.isDown("<right>")) {
-                    this.accelerate(tick, {
-                        x: +1
-                    })
-                }
-                if(Keyb.isDown(".")) {
-                    this.decelerate(tick)
-                }
-                
-                this.translate(tick)
-                
-                if(this.configuration.autodeceleration) {
-                    this.decelerate(tick)
-                }
-            },
-            accelerate: function(tick, direction) {
-                if(this.configuration.maximumresponsivity) {
-                    if(direction.x != undefined) {
-                        this.velocity.x = this.maxvelocity * direction.x
-                    } if(direction.y != undefined) {
-                        this.velocity.y = this.maxvelocity * direction.y
                     }
-                } else {
-                    if(direction.x != undefined) {
-                        this.velocity.x += this.acceleration * direction.x * tick
-                        if(this.velocity.x > this.maxvelocity) {
-                            this.velocity.x = this.maxvelocity
-                        } else if(this.velocity.x < -this.maxvelocity) {
-                            this.velocity.x = -this.maxvelocity
-                        }
-                    } if(direction.y != undefined) {
-                        this.velocity.y += this.acceleration * direction.y * tick
-                        if(this.velocity.y > this.maxvelocity) {
-                            this.velocity.y = this.maxvelocity
-                        } else if(this.velocity.y < -this.maxvelocity) {
-                            this.velocity.y = -this.maxvelocity
-                        }
+                }),
+                new Box({
+                    name: "Part-3",
+                    dimensions: [
+                        {
+                            x: 0,
+                            y: 0,
+                            width: 1,
+                            height: 1,
+                            color: "yellow"
+                        },
+                        {
+                            x: -1,
+                            y: -1,
+                            width: 3,
+                            height: 1,
+                            color: "yellow"
+                        },
+                    ],
+                    position: {
+                        x: -2,
+                        y: 0
                     }
-                }
-            },
-            decelerate: function(tick) {
-                if(this.velocity.x > 0) {
-                    this.velocity.x -= this.deceleration * tick
-                    if(this.velocity.x < 0) {
-                        this.velocity.x = 0
-                    }
-                } else if(this.velocity.x < 0) {
-                    this.velocity.x += this.deceleration * tick
-                    if(this.velocity.x > 0) {
-                        this.velocity.x = 0
-                    }
-                } if(this.velocity.y > 0) {
-                    this.velocity.y -= this.deceleration * tick
-                    if(this.velocity.y < 0) {
-                        this.velocity.y = 0
-                    }
-                } else if(this.velocity.y < 0) {
-                    this.velocity.y += this.deceleration * tick
-                    if(this.velocity.y > 0) {
-                        this.velocity.y = 0
-                    }
-                }
-            },
-            translate: function(tick) {
-                this.position.x += this.velocity.x * tick
-                this.position.y += this.velocity.y * tick
-                if(this.position.x < 0.5) {
-                    this.position.x = 0.5
-                } else if(this.position.x > WIDTH - 0.5) {
-                    this.position.x = WIDTH - 0.5
-                } if(this.position.y < 0.5) {
-                    this.position.y = 0.5
-                } else if(this.position.y > HEIGHT - 0.5) {
-                    this.position.y = HEIGHT - 0.5
-                }
-            }
+                })
+            ]
         }
     },
     update: function(tick) {
         for(var key in this.data) {
-            this.data[key].update(tick)
+            if(this.data[key].update) {
+                this.data[key].update(tick)
+            }
         }
     }
 })

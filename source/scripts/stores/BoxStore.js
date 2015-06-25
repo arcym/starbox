@@ -1,27 +1,4 @@
-var UserInterfaceStore = require("<scripts>/stores/UserInterfaceStore")
-
-var Box = function(protobox) {
-    this.width = 1
-    this.height = 1
-    this.color = "#FFF"
-    this.position = {
-        x: 0.5, y: 0.5
-    }
-    
-    for(var key in protobox) {
-        this[key] = protobox[key]
-    }
-}
-
-Box.prototype.onMouseOver = function() {
-    UserInterfaceStore.data.box = this
-    UserInterfaceStore.trigger()
-}
-
-Box.prototype.onMouseOut = function() {
-    UserInterfaceStore.data.box = null
-    UserInterfaceStore.trigger()
-}
+var Box = require("<scripts>/classes/Box")
 
 var BoxStore = Phlux.createStore({
     data: {
@@ -40,11 +17,22 @@ var BoxStore = Phlux.createStore({
             width: 1,
             height: 1,
             color: "red",
-            name: "Shrapnel",
-            description: "Some shrapnel from a kinetic missile.",
+            name: "The Big Bang",
+            description: "A kinetic missile launcher from Solphi 6",
             position: {
                 x: 5.5,
                 y: 5.5
+            }
+        }),
+        3: new Box({
+            width: 1,
+            height: 1.5,
+            color: "blue",
+            name: "Neo Tylsic Plating",
+            description: "Made from shrapnel of old tylsic ships.",
+            position: {
+                x: 8.5,
+                y: 4.5
             }
         })
     }

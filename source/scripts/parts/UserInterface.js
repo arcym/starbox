@@ -4,9 +4,6 @@ var UserInterface = React.createClass({
             return (
                 <div style={this.styles.container}>
                     <div style={this.styles.section}>
-                        <Box data={this.props.data.box}/>
-                    </div>
-                    <div style={this.styles.section}>
                         <div style={this.styles.name}>
                             {this.props.data.box.name}
                         </div>
@@ -25,7 +22,7 @@ var UserInterface = React.createClass({
             left: "0em",
             bottom: "0em",
             display: "table",
-            padding: "0.25em",
+            padding: "0.5em",
             position: "absolute"
         },
         section: {
