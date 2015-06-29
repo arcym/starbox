@@ -28,7 +28,7 @@ var Starbox = React.createClass({
     render: function() {
         return (
             <GameFrame aspect-ratio="20x15">
-                {this.renderEntities(Star, this.state.stars)}
+                <div>{this.renderEntities(Star, this.state.stars)}</div>
                 {this.renderEntities(Starship, this.state.starships)}
                 <UserInterface data={this.state.user}/>
             </GameFrame>

@@ -1,7 +1,8 @@
 var UserStore = require("<scripts>/stores/UserStore")
 
 var Box = function(protobox) {
-    this.description = "[insert description]"
+    this.name = "[name]"
+    this.description = "[description]"
     for(var key in protobox) {
         this[key] = protobox[key]
     }
