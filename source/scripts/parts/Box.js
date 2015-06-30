@@ -25,9 +25,17 @@ var Box = React.createClass({
 })
 
 var Boxdim = React.createClass({
+    getInitialState: function() {
+        return {
+            image: null
+        }
+    },
     render: function() {
         return (
-            <div style={this.renderStyles()}/>
+            <div style={this.renderStyles()}
+                onDrop={this.onDrop}
+                onDragEnter={this.onDrag}
+                onDragOver={this.onDrag}/>
         )
     },
     renderStyles: function() {
@@ -37,9 +45,27 @@ var Boxdim = React.createClass({
             position: "absolute",
             top: this.props.data.y + "em",
             left: this.props.data.x + "em",
-            backgroundColor: "red",
-            border: "1px solid black"
+            backgroundColor: "#C00",
+            backgroundSize: "100%",
+            backgroundImage: this.state.image ? "url(" + this.state.image + ")" : null
         }
+    },
+    onDrag: function(event) {
+        event.preventDefault()
+        event.stopPropagation()
+    },
+    onDrop: function(event) {
+        event.preventDefault()
+        event.stopPropagation()
+        var file = event.dataTransfer.files[0]
+        
+        var reader = new FileReader()
+        reader.onload = function(event) {
+            this.setState({
+                image: event.target.result
+            })
+        }.bind(this)
+        reader.readAsDataURL(file)
     }
 })
 
