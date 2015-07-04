@@ -1,8 +1,6 @@
 var Star = React.createClass({
     render: function() {
-        return (
-            <div style={this.renderStyles()}/>
-        )
+        return <div style={this.renderStyles()}/>
     },
     renderStyles: function() {
         return {

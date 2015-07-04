@@ -21,22 +21,23 @@ var StarStore = Phlux.createStore({
         return position
     },
     initiateStore: function() {
+        this.data = new Array()
         for(var i = 0; i < 75; i++) {
-            this.data[i] = new Object({
-                "color": this.getRandomColor(),
-                "position": this.getRandomPosition({
-                    "z": i % 12 / 16 + 0.25
+            this.data.push({
+                color: this.getRandomColor(),
+                position: this.getRandomPosition({
+                    z: i % 12 / 16 + 0.25
                 })
             })
         }
     },
     update: function(tick) {
         for(var index in this.data) {
-            var star = this.data[index]
-            star.position.x -= 4 * tick * star.position.z
-            if(star.position.x < 0) {
-                star.position = this.getRandomPosition({
-                    x: star.position.x + WIDTH + 1
+            var datum = this.data[index]
+            datum.position.x -= (tick * 4) * datum.position.z
+            if(datum.position.x < 0) {
+                datum.position = this.getRandomPosition({
+                    x: datum.position.x + WIDTH + 1
                 })
             }
         }

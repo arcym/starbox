@@ -7,11 +7,11 @@ window.Tickly = require("tickly")
 window.WIDTH = 20
 window.HEIGHT = 15
 
-var Star = require("<scripts>/parts/Star")
-var Starship = require("<scripts>/parts/Starship")
+var Star = require("<scripts>/views/Star")
+var Starship = require("<scripts>/views/Starship")
 var StarStore = require("<scripts>/stores/StarStore")
 var StarshipStore = require("<scripts>/stores/StarshipStore")
-var GameFrame = require("<scripts>/parts/GameFrame")
+var GameFrame = require("<scripts>/views/GameFrame")
 
 var Game = React.createClass({
     mixins: [
