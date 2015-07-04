@@ -1,6 +1,6 @@
 # starbox #
 
-An awesome game!
+A sidescrolling shmup about building.
 
 ## Installation ##
 
@@ -13,10 +13,6 @@ An awesome game!
 
 	$ gulp
 
-### To recompile while you code ###
-
-	$ gulp watch
-
-### To host a server while you code ###
+### To compile the code while you code ###
 
 	$ gulp server
