@@ -27,6 +27,7 @@ var Game = React.createClass({
                 {this.renderEntities(Star, this.state.stars)}
                 {this.renderEntities(Projectile, this.state.projectiles)}
                 {this.renderEntities(Starship, this.state.starships)}
+                <span>WASD to move, space to shoot.</span>
             </GameFrame>
         )
     },
