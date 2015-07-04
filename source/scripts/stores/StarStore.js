@@ -1,5 +1,3 @@
-var STARS = 75
-
 var StarStore = Phlux.createStore({
     colors: [
         "#E42217", //Lava Red, RGB(228, 34, 23)
@@ -16,28 +14,26 @@ var StarStore = Phlux.createStore({
         return this.colors[Math.floor(Math.random() * this.colors.length)]
     },
     getRandomPosition: function(position) {
-        position = position || {}
+        position = position || new Object()
         position.x = position.x || Math.random() * WIDTH
         position.y = position.y || Math.random() * HEIGHT
         position.z = position.z || Math.random() * 0.75 + 0.25
         return position
     },
     initiateStore: function() {
-        for(var index = 0; index < 75; index++) {
-            this.data[index] = {
-                color: this.getRandomColor(),
-                position: this.getRandomPosition({
-                    z: index % 12 / 16 + 0.25
+        for(var i = 0; i < 75; i++) {
+            this.data[i] = new Object({
+                "color": this.getRandomColor(),
+                "position": this.getRandomPosition({
+                    "z": i % 12 / 16 + 0.25
                 })
-            }
+            })
         }
     },
     update: function(tick) {
-        var dx = 4 * tick
-        var stars = this.data
-        for(var index in stars) {
-            var star = stars[index]
-            star.position.x -= dx * star.position.z
+        for(var index in this.data) {
+            var star = this.data[index]
+            star.position.x -= 4 * tick * star.position.z
             if(star.position.x < 0) {
                 star.position = this.getRandomPosition({
                     x: star.position.x + WIDTH + 1

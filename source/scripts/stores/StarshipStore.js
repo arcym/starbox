@@ -2,9 +2,6 @@ var Box = require("<scripts>/classes/Box")
 
 var Shapes = require("<scripts>/data/Shapes")
 
-var Boxes = {
-}
-
 var StarshipStore = Phlux.createStore({
     data: {
         me: {
