@@ -1,4 +1,5 @@
 var Shapes = require("<scripts>/data/Shapes")
+var MessageStore = require("<scripts>/stores/MessageStore")
 var ProjectileStore = require("<scripts>/stores/ProjectileStore")
 
 var StarshipStore = Phlux.createStore({
@@ -6,15 +7,16 @@ var StarshipStore = Phlux.createStore({
         0: {
             position: {
                 x: WIDTH / 4,
-                y: HEIGHT / 2
+                y: HEIGHT / 2,
+                sx: 0
             },
             velocity: {
                 x: 0,
                 y: 0
             },
-            maxvelocity: 5,
+            maxvelocity: 9,
             acceleration: 50,
-            deceleration: 50 * 0.50,
+            deceleration: 50,
             configuration: {
                 autodeceleration: true,
                 maximumresponsivity: true
@@ -36,6 +38,17 @@ var StarshipStore = Phlux.createStore({
                 keyspam: true
             },
             update: function(tick) {
+                this.position.sx += 7 * tick
+                if(this.position.sx >= 85) {
+                    MessageStore.addMessage({
+                        "text": "You win!",
+                        "position": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    })
+                }
+                
                 if(Keyb.isDown("W")
                 || Keyb.isDown("<up>")) {
                     this.accelerate(tick, {
@@ -81,11 +94,11 @@ var StarshipStore = Phlux.createStore({
                     			y: 0.375,
                             },
                             position: {
-                                x: this.position.x + 1.5 + 0.375,
+                                x: this.position.sx + this.position.x + 1.5 + 0.375,
                                 y: this.position.y
                             },
                             velocity: {
-                                x: 0.25,
+                                x: 0.5,
                                 y: 0
                             }
                         })

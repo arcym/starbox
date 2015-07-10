@@ -1,4 +1,3 @@
-
 var Shapes = {
     // O
     "dot-1": [
