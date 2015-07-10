@@ -44,14 +44,30 @@ var StarshipPartStore = Phlux.createStore({
         },
         "7": {
             shape: Shapes["longspoon-2"],
-            position: {x: 78, y: HEIGHT / 2},
+            position: {x: 78, y: 7},
             color: "#346630"
         },
         "8": {
             shape: Shapes["longspoon-3"],
-            position: {x: 80, y: HEIGHT / 2},
+            position: {x: 80, y: 7},
             color: "#346630"
         }
+    },
+    collides: function(x, y) {
+        for(var key in this.data) {
+            var part = this.data[key]
+            var px = Math.floor(part.position.x)
+            var py = Math.floor(part.position.y)
+            for(var index in part.shape) {
+                var partpart = part.shape[index]
+                var ppx = px + partpart.x
+                var ppy = py + partpart.y
+                if(x == ppx && y == ppy) {
+                    return true
+                }
+            }
+        }
+        return false
     }
 })
 
