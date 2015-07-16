@@ -20,6 +20,9 @@ var StarStore = Phlux.createStore({
         position.z = position.z || Math.random() * 0.75 + 0.25
         return position
     },
+    stop: function() {
+        this.stopped = true
+    },
     initiateStore: function() {
         this.data = new Array()
         for(var i = 0; i < 75; i++) {
@@ -32,6 +35,7 @@ var StarStore = Phlux.createStore({
         }
     },
     update: function(tick) {
+        if(this.stopped) {return}
         for(var index in this.data) {
             var datum = this.data[index]
             datum.position.x -= (tick * 2) * datum.position.z

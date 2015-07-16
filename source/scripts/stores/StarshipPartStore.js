@@ -60,6 +60,8 @@ var StarshipPartStore = Phlux.createStore({
         }
     },
     collides: function(x, y) {
+        x = Math.floor(x)
+        y = Math.floor(y)
         for(var key in this.data) {
             var part = this.data[key]
             var px = Math.floor(part.position.x)

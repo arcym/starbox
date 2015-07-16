@@ -1,4 +1,5 @@
 var StarshipPartStore = require("<scripts>/stores/StarshipPartStore")
+var ExplosionStore = require("<scripts>/stores/ExplosionStore")
 
 var ProjectileStore = Phlux.createStore({
 	update: function(tick) {
@@ -18,6 +19,7 @@ var ProjectileStore = Phlux.createStore({
                 part.damage -= 1
                 if(part.damage <= 0) {
                     delete StarshipPartStore.data[part.key]
+                    ExplosionStore.boom(projectile.position, part)
                 }
                 delete this.data[index]
                 continue

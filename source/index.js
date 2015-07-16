@@ -1,6 +1,6 @@
 window.React = require("react")
 window.Phlux = require("phlux")
-
+window.ShortID = require("shortid")
 window.Keyb = require("keyb")
 window.Tickly = require("tickly")
 
@@ -13,6 +13,8 @@ var Starship = require("<scripts>/views/Starship")
 var StarshipStore = require("<scripts>/stores/StarshipStore")
 var StarshipPart = require("<scripts>/views/StarshipPart")
 var StarshipPartStore = require("<scripts>/stores/StarshipPartStore")
+var Explosion = require("<scripts>/views/Explosion")
+var ExplosionStore = require("<scripts>/stores/ExplosionStore")
 var Projectile = require("<scripts>/views/Projectile")
 var ProjectileStore = require("<scripts>/stores/ProjectileStore")
 var Message = require("<scripts>/views/Message")
@@ -26,6 +28,7 @@ var Game = React.createClass({
         Phlux.connectStore(StarshipStore, "starships"),
         Phlux.connectStore(ProjectileStore, "projectiles"),
         Phlux.connectStore(StarshipPartStore, "starshipparts"),
+        Phlux.connectStore(ExplosionStore, "explosions"),
         Phlux.connectStore(MessageStore, "messages"),
     ],
     render: function() {
@@ -36,6 +39,7 @@ var Game = React.createClass({
                     {this.renderEntities(Projectile, this.state.projectiles)}
                     {this.renderEntities(Starship, this.state.starships)}
                     {this.renderEntities(StarshipPart, this.state.starshipparts)}
+                    {this.renderEntities(Explosion, this.state.explosions)}
                 </Camera>
                 {this.renderEntities(Message, this.state.messages)}
             </GameFrame>
@@ -70,6 +74,7 @@ var Game = React.createClass({
             StarshipStore.update(tick)
             ProjectileStore.update(tick)
             MessageStore.update(tick)
+            ExplosionStore.update(tick)
             StarStore.update(tick)
         })
     }

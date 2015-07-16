@@ -1,6 +1,9 @@
 var Shapes = require("<scripts>/data/Shapes")
 var MessageStore = require("<scripts>/stores/MessageStore")
+var ExplosionStore = require("<scripts>/stores/ExplosionStore")
 var ProjectileStore = require("<scripts>/stores/ProjectileStore")
+var StarshipPartStore = require("<scripts>/stores/StarshipPartStore")
+var StarStore = require("<scripts>/stores/StarStore")
 
 var StarshipStore = Phlux.createStore({
     data: {
@@ -21,6 +24,7 @@ var StarshipStore = Phlux.createStore({
                 autodeceleration: true,
                 maximumresponsivity: true
             },
+            key: 0,
             parts: [
                 {
                     shape: Shapes["triangle-1"],
@@ -107,6 +111,36 @@ var StarshipStore = Phlux.createStore({
 
                 if(this.configuration.autodeceleration) {
                     this.decelerate(tick)
+                }
+                
+                var x = this.position.x + this.position.sx
+                var y = this.position.y
+                var collidedpart = StarshipPartStore.collides(x, y)
+                if(!!collidedpart) {
+                    for(var index in this.parts) {
+                        var part = this.parts[index]
+                        ExplosionStore.boom({"x": x, "y": y},
+                        {
+                            shape: part.shape,
+                            position: {
+                                x: x + part.position.x,
+                                y: y + part.position.y,
+                            },
+                            color: "#FC0"
+                        })
+                        delete StarshipStore.data[this.key]
+                        MessageStore.addMessage({
+                            "text": "Whoops! You exploded! :(",
+                            "size": 2,
+                            "position": {
+                                "x": 3,
+                                "y": 6
+                            }
+                        })
+                        StarStore.stopped = true
+                        delete StarshipPartStore.data[collidedpart.key]
+                        ExplosionStore.boom({"x": x, "y": y}, collidedpart)
+                    }
                 }
             },
             accelerate: function(tick, direction) {

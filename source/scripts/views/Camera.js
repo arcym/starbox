@@ -6,11 +6,20 @@ var Camera = React.createClass({
             </div>
         )
     },
+    lastx: 0,
     renderStyles: function() {
-        var x = this.props.target.position.sx
-        return {
-            position: "absolute",
-            left: x * -1 + "em"
+        if(!!this.props.target) {
+            var x = this.props.target.position.sx
+            this.lastx = x
+            return {
+                position: "absolute",
+                left: x * -1 + "em"
+            }
+        } else {
+            return {
+                position: "absolute",
+                left: this.lastx * -1 + "em"
+            }
         }
     }
 })
