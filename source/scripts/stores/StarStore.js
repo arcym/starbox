@@ -34,7 +34,7 @@ var StarStore = Phlux.createStore({
     update: function(tick) {
         for(var index in this.data) {
             var datum = this.data[index]
-            datum.position.x -= (tick * 4) * datum.position.z
+            datum.position.x -= (tick * 2) * datum.position.z
             if(datum.position.x < 0) {
                 datum.position = this.getRandomPosition({
                     x: datum.position.x + WIDTH + 1

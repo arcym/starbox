@@ -13,7 +13,12 @@ var ProjectileStore = Phlux.createStore({
             }
             var x = Math.floor(projectile.position.x)
             var y = Math.floor(projectile.position.y)
-            if(StarshipPartStore.collides(x, y)) {
+            var part = StarshipPartStore.collides(x, y)
+            if(!!part) {
+                part.damage -= 1
+                if(part.damage <= 0) {
+                    delete StarshipPartStore.data[part.key]
+                }
                 delete this.data[index]
                 continue
             }
