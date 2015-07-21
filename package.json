@@ -1,7 +1,6 @@
 {
   "name": "starbox",
   "version": "0.1.0",
-  "main": "index.html",
   "author": {
     "name": "Andrew McPherson",
     "email": "andrewmcp333@gmail.com"
@@ -37,11 +36,5 @@
     "vinyl-source-stream": "~1.1.0",
     "watchify": "~2.4.0",
     "yargs": "~3.5.3"
-  },
-  "window": {
-    "width": 640,
-    "height": 360,
-    "toolbar": false,
-    "title": "Starbox"
   }
 }

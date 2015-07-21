@@ -7,22 +7,25 @@ window.Tickly = require("tickly")
 window.WIDTH = 20
 window.HEIGHT = 15
 
-var Star = require("<scripts>/views/Star")
 var StarStore = require("<scripts>/stores/StarStore")
-var Starship = require("<scripts>/views/Starship")
 var StarshipStore = require("<scripts>/stores/StarshipStore")
-var StarshipPart = require("<scripts>/views/StarshipPart")
 var StarshipPartStore = require("<scripts>/stores/StarshipPartStore")
-var Explosion = require("<scripts>/views/Explosion")
 var ExplosionStore = require("<scripts>/stores/ExplosionStore")
-var Projectile = require("<scripts>/views/Projectile")
 var ProjectileStore = require("<scripts>/stores/ProjectileStore")
-var Message = require("<scripts>/views/Message")
 var MessageStore = require("<scripts>/stores/MessageStore")
-var GameFrame = require("<scripts>/views/GameFrame")
+
+var Star = require("<scripts>/views/Star")
+var Starship = require("<scripts>/views/Starship")
+var StarshipPart = require("<scripts>/views/StarshipPart")
+var Explosion = require("<scripts>/views/Explosion")
+var Projectile = require("<scripts>/views/Projectile")
+var Message = require("<scripts>/views/Message")
 var Camera = require("<scripts>/views/Camera")
 
-var Game = React.createClass({
+var FrameView = require("<scripts>/views/FrameView")
+var ForEachView = require("<scripts>/views/ForEachView")
+
+var GameView = React.createClass({
     mixins: [
         Phlux.connectStore(StarStore, "stars"),
         Phlux.connectStore(StarshipStore, "starships"),
@@ -33,16 +36,16 @@ var Game = React.createClass({
     ],
     render: function() {
         return (
-            <GameFrame aspect-ratio="20x15">
-                {this.renderEntities(Star, this.state.stars)}
+            <FrameView aspect-ratio={WIDTH + "x" + HEIGHT}>
+                <ForEachView data={this.state.stars} view={Star}/>
                 <Camera target={this.state.starships[0]}>
-                    {this.renderEntities(Projectile, this.state.projectiles)}
-                    {this.renderEntities(Starship, this.state.starships)}
-                    {this.renderEntities(StarshipPart, this.state.starshipparts)}
-                    {this.renderEntities(Explosion, this.state.explosions)}
+                    <ForEachView data={this.state.projectiles} view={Projectile}/>
+                    <ForEachView data={this.state.starships} view={Starship}/>
+                    <ForEachView data={this.state.starshipparts} view={StarshipPart}/>
+                    <ForEachView data={this.state.explosions} view={Explosion}/>
                 </Camera>
-                {this.renderEntities(Message, this.state.messages)}
-            </GameFrame>
+                <ForEachView data={this.state.messages} view={Message}/>
+            </FrameView>
         )
     },
     renderEntities: function(Class, data) {
@@ -80,4 +83,4 @@ var Game = React.createClass({
     }
 })
 
-React.render(<Game/>, document.body)
+React.render(<GameView/>, document.body)
